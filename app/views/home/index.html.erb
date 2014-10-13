@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Skill Drill</title>
+        <meta name="viewport" content="width=device-width">
+        <script type='text/javascript' src='js/jquery.js'></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script>
+           $(function() {
+               var pull = $('.menu-btn');
+               menu = $('nav .menu');
+               menuHeight = menu.height();
+               $(pull).on('click', function(e) {
+               e.preventDefault();
+               menu.slideToggle();
+               });
+               $(window).resize(function(){
+               var w = $(window).width();
+               if(w > 320 && menu.is(':hidden')) {
+               menu.removeAttr('style');
+               }
+               });
+               });
+        </script>
+</head>
+
+<body>
+<%= puts "Hello " %>
+<header>
+	<div class="wrapper">
+    	<div class="col">
+        	<div class="col-4">
+            	<h1 class="logo"><a href= "/home" ><img src="/assets/isygnet-logo-final.png"></a></h1>
+            </div>
+            <div class="col-8">
+            	<div class="fr clr social">
+                	<span>Stay Connected:</span>
+                	<ul class="social-icon fr">
+						<li><a href="#" class="facebook">&nbsp;</a></li>
+                        <li><a href="#" class="g-plus">&nbsp;</a></li>
+						<li><a href="#" class="tweet">&nbsp;</a></li>
+                        <li><a href="#" class="rss">&nbsp;</a></li>
+						<li><a href="#" class="vimeo">&nbsp;</a></li>
+                        <li><a href="#" class="linkedin">&nbsp;</a></li>						
+					</ul>
+                </div>
+                <div class="fr phone-number clr">
+                	<span class="phone-num-img">&nbsp;</span>
+                	<span class="phone-text">Contact us: </span>
+                    <span class="number">(<small>020</small>) 6419808</span>
+                </div>
+                <nav class="clr fr">
+                    <a class="menu-btn" href="javascript:void(0);">Menu</a>
+                    <ul class="fr menu-pills menu">
+                        <li><a href="/home" class="active">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="#">Our Cources</a>
+                            <ul class="sub-menu">
+                              <li><a href="#">Php Cource</a></li>
+                              <li><a href="#">Php Cource</a></li>
+                              <li><a href="#">Php Cource</a></li>
+                              <li><a href="#">Php Cource</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><!-- wrapper end -->
+</header>
+<!-- header end -->
+<div class="wrapper clr">
+            <section class="slider shadow">
+                <img src="/assets/img1.jpg">        
+            </section><!-- slider end -->
+            <section class="stu-tetis shadow margin">
+                    <div class="col-5">
+                        <div class="shadow box padding">
+                          <img src="/assets/img2.jpg" alt="img">
+                        </div>    
+                    </div>
+                    <div class="col-7">
+                        <h2>Studetn Testimonials</h2>
+                        <p>See what our graduates have to say about how Digital Marketing Institute programmes helped their careers.</p>
+                        <div class="boxs clr col">
+                            <div class="col-4">
+                                <a href="#" class="thumbs shadow">
+                                    <img  src="/assets/img3.jpg" alt="img">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="thumbs shadow">
+                                    <img  src="/assets/img3.jpg" alt="img">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="thumbs shadow">
+                                    <img  src="/assets/img3.jpg" alt="img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>        
+            </section>
+            <section class="maping shadow">
+                    <div class="col-5">
+                        <div class="box">
+                        <img src="/assets/map.jpg">
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <h2>Visit Us</h2>
+                        <p>Our Global Partners are some of the world's finest training providers. <a href="#">Find out more</a> about where you can study our recognised programmes around the world</p>
+                        <div class="clr"></div>
+                        <button type="submit" class="btn-normal">Contact Us</button>
+                    </div>
+            </section><!-- maping end -->
+            <section class="courses shadow">
+                    <div class="col-7">
+                        <div class="phone-img">
+                            <img src="/assets/img4.jpg">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <h2>Our Courses</h2>
+                        <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
+                        <div class="input-group">
+                            <select class="input-control">
+                               <option>Select a course</option>
+                               <option>2</option>
+                               <option>3</option>
+                               <option>4</option>
+                               <option>5</option>
+                            </select>
+                        </div>
+                        <div class="clr"></div>        
+                        <button type="submit" class="btn-normal">CONTACT THE TEAM</button>
+                    </div>
+            </section><!-- courses end -->
+            <section class="partner-slider shadow">
+                    <h2>Our Recruitment Partner</h2>
+                    <div class="slider-img fixed-bar">         
+                        <ul id="carousel" class="elastislide-list">
+                            <li><a href="#"><img src="/assets/img5.jpg"></a></li>
+                            <li><a href="#"><img src="/assets/img6.jpg"></a></li>
+                            <li><a href="#"><img src="/assets/img7.jpg"></a></li>
+                            <li><a href="#"><img src="/assets/img8.jpg"></a></li>
+                            <li><a href="#"><img src="/assets/img9.jpg"></a></li>
+                        </ul>
+                    </div>
+            </section> <!-- partner-slider end -->
+            <section class="traning shadow">
+                    <div class="col-7">
+                        <h2>Corporate Traning</h2>
+                           <h3>We offer flexible and tailored Corporate Training packages that match your business objectives.
+                                <a href="/corporate-training">Find out more here.</a>
+                           </h3> 
+                        <div class="para">
+                            The lecturers were excellent. They were experts in their field but most importantly they were practical teachers. We were able to apply what we learned to our own business through examples they showed us.
+                        </div>   
+                        <p>Kartik Patil<span> Director </span></p>
+                    </div>
+                    <div class="col-4">
+                        <div class="train-img">
+                            <img src="/assets/img10.png" alt="img" width="227px" height="231px">
+                        </div> 
+                    </div>
+            </section><!-- traning end -->
+            <footer>
+                     <p>Copyright 2014 All Rights Reserved by <a href="#">Skill Drill</a><p>
+            </footer><!-- footer end -->    
+</div><!-- wrapper end -->   
+</body>
+</html>
