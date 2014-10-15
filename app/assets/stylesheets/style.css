@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;
 	padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;text-decoration: none;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
 body { color: #333;font-family:"Arial";font-size: 14px;line-height: 1.42857;}
@@ -78,8 +78,8 @@ textarea.input-control {height: auto;}
 /* maping css */
 .maping{overflow: hidden; padding: 15px 10px; margin: 30px 0; background-color: #fff }
 .maping .col-7 {margin-left: 50px;width: 51.333% !important;}
-.btn-normal{background-image:url(../images/btn_bg.png); background-repeat: repeat; background-position: 0 0; border:0px !important; font-size: 16px !important; color:#F9F9F9 !important; padding: 10px 20px; text-transform: uppercase; margin-top: 30px;text-shadow: 1px 1px 0 #444; border-radius: 3px; cursor: pointer;font-family: "arial";}
-.btn-normal:hover{background-image:url(../images/btn_bg_hover.png) !important; background-repeat: repeat; background-position: 0 0; opacity: 1 !important}
+.btn-normal{background-image:url(/assets/btn_bg.png); background-repeat: repeat; background-position: 0 0; border:0px !important; font-size: 16px !important; color:#F9F9F9 !important; padding: 10px 20px; text-transform: uppercase; margin-top: 30px;text-shadow: 1px 1px 0 #444; border-radius: 3px; cursor: pointer;font-family: "arial";}
+.btn-normal:hover{background-image:url(/assets/btn_bg_hover.png) !important; background-repeat: repeat; background-position: 0 0; opacity: 1 !important}
 /* courses css */
 .courses{overflow: hidden; background-color: #fff;padding: 40px 10px 20px 10px; margin: 30px 0;}
 .courses h2{color: #e56d00}
@@ -94,7 +94,7 @@ textarea.input-control {height: auto;}
 .train-img{width: 227px; height: 231px;}
 .traning h3{color: #272727; font-size: 20px;  clear: both;}
 .traning .col-7 {margin-left: 80px;width: 57.333%;}
-.para{background-image:url(../images/quote.png); background-repeat: no-repeat; background-position: 0 0; padding: 5px 0 0 70px;font-size: 14px; line-height: 20px; color: #494949; margin-top: 30px;}
+.para{background-image:url(/assets/quote.png); background-repeat: no-repeat; background-position: 0 0; padding: 5px 0 0 70px;font-size: 14px; line-height: 20px; color: #494949; margin-top: 30px;}
 .traning .col-7 > p {color: #272727;font-size: 14px;font-weight: bold;padding: 10px 0 0 70px;}
 .col-7 p span {color: #494949;font-style: italic;font-size: 13px; font-weight: normal;}
 .sidebar .menu-stacked {margin: 10px 0 0 30px;}
@@ -113,17 +113,27 @@ textarea.input-control {height: auto;}
 .cours-she h2 {float: none;line-height: 22px;margin-bottom: 10px;}
 .border-bottom{border-bottom: 1px dotted #ccc;margin-bottom: 20px;}
 .course-img {height: 180px;position: relative; overflow: hidden;}
-.caption {bottom: 0;font-size: 18px;padding: 10px;position: absolute;width: 100%;z-index: 999999;background-image: url(../images/bg-1.png); background-position: 0 0; background-repeat: repeat;color: #F9F9F9; text-align: center;}
+.caption {bottom: 0;font-size: 18px;padding: 10px;position: absolute;width: 100%;z-index: 999999;background-image: url(/assets/bg-1.png); background-position: 0 0; background-repeat: repeat;color: #F9F9F9; text-align: center;}
 .about span.caption p {float: left;color: #F9F9F9;}
 .read-btn {float: right;font-size: 14px;margin-top: 3px;text-align: right;}
 .read-btn:hover {text-decoration: underline;}.text-centre{text-align: center;}.text-centre .btn-normal{margin: 20px 0}
 .italic{font-style: italic;}.about-slider .caption {bottom: 5px;width: 97%;}
 .about .col-4 {margin-bottom: 20px;}
 /***placement page ***/
-.place-box {float: left;width: 100%;border: 1px solid #eeeeee;transition: all 0.2s ease-out 0s; background-image: url(../images/background.jpg); background-position: 0 0; background-repeat:repeat;}
+.place-box {float: left;width: 100%;border: 1px solid #eeeeee;transition: all 0.2s ease-out 0s; background-image: url(/assets/background.jpg); background-position: 0 0; background-repeat:repeat;}
 .marg-top{margin-top: 20px;}.placement {padding-bottom: 20px;}.place-box .caption {bottom: 6px;width: 81.5%;}
 .place-box:hover { border: 1px solid #999999;box-shadow: 0 0 30px #999999 inset;}.place-box > img {margin: 0 auto;width: auto;}
 .placement .col-12{margin-bottom: 0px;}.placement .col-3{margin: 4px; padding: 0px; width: 24%}
+/* Contact Page*/
+.input_field label {display: block; padding-bottom:5px;}
+.input_field input[type="text"], .input_field input[type="email"], .input_field textarea {border: 1px solid #ccc;border-radius:3px;padding:5px;resize:none;width:100%;color: #999;font-family: arial;font-size: 12px;}
+.contact .col-6 span {color: #555; font-size: 16px; font-weight: bold;}
+.contact .col-6 address a {display: block;}
+.contact button {margin-top:0px;}
+.contact address p.phone a {background-image: url("/assets/icon.png");background-position: 0 -39px; background-repeat: no-repeat; padding-left: 32px;}
+.contact address p.email a {background-image: url("/assets/icon.png");background-position: 0 -59px; background-repeat: no-repeat; padding-left: 32px;}
+.contact .input_field {margin-bottom: 10px;}
+.contact span.getintouch {display: inline-block;font-family: "DroidSerifRegular";font-size: 20px;margin-bottom: 10px;}
 /* footer css */
 footer p{text-align: center; float: none; margin: 10px 0;}
 /* title css */ 

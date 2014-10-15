@@ -1,17 +1,19 @@
 class HomeController < ApplicationController
 
 	def index
-		@courses = Course.find(:all)		
+		@courses = Course.find(:all)
+		@recruiters = RecruitmentPartner.all
 	end
 
 	def about
 		@courses = Course.find(:all)
 	end
-	def cource_detail
+	def course_detail
 		@courses = Course.find(:all)
 	#	@courses = Course.find(params[:id])
 	end	
-	def contact_us
+	def contact
+		@courses = Course.find(:all)
 	end
 	def placement
 		@testimonial = Testimonial.all

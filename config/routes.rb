@@ -6,13 +6,9 @@ Isygnetdemo::Application.routes.draw do
   root 'home#index'
   resources :home
   get '/about/', to: 'home#about', as: 'about'
-
-  get '/cource_detail/', to: 'home#cource_detail', as: 'cource_detail'
-  
-  #get '/cources/' to:'home#cources', as: 'cources'
-
-  get '/contact_us/', to: 'home#contact_us', as: 'contact_us'  
-  get '/placement/', to: 'home#placement', as: 'placement' 
+  get '/course_detail/', to: 'home#course_detail', as: 'course_detail'
+  get '/contact/', to: 'home#contact', as: 'contact'
+  get '/placement/', to: 'home#placement', as: 'placement'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
