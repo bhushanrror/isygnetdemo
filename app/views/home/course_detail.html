@@ -53,13 +53,12 @@
                     <a class="menu-btn" href="javascript:void(0);">Menu</a>
                     <ul class="fr menu-pills menu">
                         <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="/about">About Us</a></li>
                         <li><a href="#">Our Cources</a>
                           <ul class="sub-menu">
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
+                              <% @courses.each do |c| %>
+                           <li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
+                            <% end %>
                           </ul>
                         </li>
                         <li><a href="#">Blog</a></li>
@@ -90,10 +89,14 @@
                       <img src="/assets/tlabs-php-course.png" width="100%">                         
                     </div>
                     <div class="col-8">    
-                              <h2>Php Cources</h2>     
-                              <p>The Digital Marketing Institute is setting the global standard for Digital Marketing education. We specialise in Digital Marketing &ndash; nothing else &ndash; and by the end of 2014 we will have trained 11,000 people across four continents.</br>
-                              Our syllabus is defined by the world’s leading digital brands and agencies. Courses are taught by expert practitioners currently working in Digital Marketing and your learning will be shaped by their practical experiences and case studies.</br>
-                                Our syllabus is defined by the world’s leading digital brands and agencies. Courses are taught</p>           
+                              <h2><%= @course.title%></h2> 
+                              <p><%= @course.description%></p>
+                              <p><%= @course.duration%></p>
+                              <p><%= @course.fees%></p>
+                              <p><%= @course.feature_image%></p> 
+                              <p><%= @course.status%></p>
+                              
+                              <p></p>           
                        <button type="submit" class="btn-normal course-shed-btn">Schedule of Cources</button>                 
    						      </div>
                 </div>    
@@ -106,24 +109,29 @@
                   <div class="col-4">
                             <div class="course-img">
                                     <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>Android Cources</p>
-                                      <a href="#" class="read-btn">Read More</a> 
+                                    <span class="caption">
+                                    <p>
+                                    
+                                    <%= rand(100) %>
+                                    
+                                    </p>
+                                      <a href="/course_detail?id=1" class="read-btn">Read More</a> 
                                     </span>
                               </div>
                   </div>
                   <div class="col-4">
                             <div class="course-img">
                                     <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>Android Cources</p>
-                                      <a href="#" class="read-btn">Read More</a> 
+                                    <span class="caption"><p>graduation</p>
+                                      <a href="/course_detail?id=2" class="read-btn">Read More</a> 
                                     </span>
                               </div>  
                   </div>
                   <div class="col-4">
                            <div class="course-img">
                                     <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>Android Cources</p>
-                                      <a href="#" class="read-btn">Read More</a> 
+                                    <span class="caption"><p>abcd</p>
+                                      <a href="/course_detail?id=3" class="read-btn">Read More</a> 
                                     </span>
                               </div>   
                   </div>
@@ -131,7 +139,7 @@
             </div>             
             </section>                       
             <footer>
-                     <p>Copyright 2014 All Rights Reserved by <a href="#">Skill Drill</a><p>
+                     <p>Copyright 2014 All Rights Reserved by <a href="#">isygnet</a><p>
             </footer><!-- footer end -->    
 </div><!-- wrapper end -->   
 </body>

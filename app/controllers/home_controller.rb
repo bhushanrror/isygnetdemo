@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 	end
 	def course_detail
 		@courses = Course.find(:all)
-	#	@courses = Course.find(params[:id])
+		@course = Course.find(params[:id])
 	end	
 	def contact
 		@courses = Course.find(:all)
