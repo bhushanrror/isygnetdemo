@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Skill Drill</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="css/grid.css" rel="stylesheet" type="text/css">
+        <script type='text/javascript' src='js/jquery.js'></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script>
+           $(function() {
+               var pull = $('.menu-btn');
+               menu = $('nav .menu');
+               menuHeight = menu.height();
+               $(pull).on('click', function(e) {
+               e.preventDefault();
+               menu.slideToggle();
+               });
+               $(window).resize(function(){
+               var w = $(window).width();
+               if(w > 320 && menu.is(':hidden')) {
+               menu.removeAttr('style');
+               }
+               });
+               });
+        </script>
+</head>
+<body>
+<header>
+	<div class="wrapper">
+    	<div class="col">
+        	 <div class="col-4">
+              <h1 class="logo"><a href="/home"><img src="/assets/isygnet-logo-final.png"></a></h1>
+            </div>
+            <div class="col-8">
+            	<div class="fr clr social">
+                	<span>Stay Connected:</span>
+                	<ul class="social-icon fr">
+						<li><a href="#" class="facebook">&nbsp;</a></li>
+                        <li><a href="#" class="g-plus">&nbsp;</a></li>
+						<li><a href="#" class="tweet">&nbsp;</a></li>
+                        <li><a href="#" class="rss">&nbsp;</a></li>
+						<li><a href="#" class="vimeo">&nbsp;</a></li>
+                        <li><a href="#" class="linkedin">&nbsp;</a></li>						
+					</ul>
+                </div>
+                <div class="fr phone-number clr">
+                	<span class="phone-num-img">&nbsp;</span>
+                	<span class="phone-text">Contact us: </span>
+                    <span class="number">(<small>020</small>) 6419808</span>
+                </div>
+                <nav class="clr fr">
+                    <a class="menu-btn" href="javascript:void(0);">Menu</a>
+                    <ul class="fr menu-pills menu">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Cources</a>
+                          <ul class="sub-menu">
+                              <li><a href="#">Php Cource</a></li>
+                              <li><a href="#">Php Cource</a></li>
+                              <li><a href="#">Php Cource</a></li>
+                              <li><a href="#">Php Cource</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><!-- wrapper end -->
+</header>
+<!-- header end -->
+<div class="wrapper clr">            
+            <section class="about shadow">
+            <div class="col title">                
+                <ul class="breadcrumb">
+                   <li><a href="/home">Home</a> / <span class="current">Cources</span></li>
+                </ul> 
+                
+            </div>
+            <div class="col">
+              <div class="mid-head col-12 italic">                    
+                  We are Stark Digital Media Services Pvt. Ltd a leading WEB Services Company providing end to end design and developmentservices to its clients across the globe
+              </div>
+             </div>
+            <div class="col cours-she">
+                 <div class="col-12 border-bottom">
+                    <div class="col-4">
+                      <img src="/assets/tlabs-php-course.png" width="100%">                         
+                    </div>
+                    <div class="col-8">    
+                              <h2>Php Cources</h2>     
+                              <p>The Digital Marketing Institute is setting the global standard for Digital Marketing education. We specialise in Digital Marketing &ndash; nothing else &ndash; and by the end of 2014 we will have trained 11,000 people across four continents.</br>
+                              Our syllabus is defined by the world’s leading digital brands and agencies. Courses are taught by expert practitioners currently working in Digital Marketing and your learning will be shaped by their practical experiences and case studies.</br>
+                                Our syllabus is defined by the world’s leading digital brands and agencies. Courses are taught</p>           
+                       <button type="submit" class="btn-normal course-shed-btn">Schedule of Cources</button>                 
+   						      </div>
+                </div>    
+            </div>
+            <div class="col">
+              <div class="col-12 mid-head">
+                You can also check Cources
+              </div>
+              <div class="col-12">
+                  <div class="col-4">
+                            <div class="course-img">
+                                    <img src="/assets/tlabs-php-course.png" alt="img">
+                                    <span class="caption"><p>Android Cources</p>
+                                      <a href="#" class="read-btn">Read More</a> 
+                                    </span>
+                              </div>
+                  </div>
+                  <div class="col-4">
+                            <div class="course-img">
+                                    <img src="/assets/tlabs-php-course.png" alt="img">
+                                    <span class="caption"><p>Android Cources</p>
+                                      <a href="#" class="read-btn">Read More</a> 
+                                    </span>
+                              </div>  
+                  </div>
+                  <div class="col-4">
+                           <div class="course-img">
+                                    <img src="/assets/tlabs-php-course.png" alt="img">
+                                    <span class="caption"><p>Android Cources</p>
+                                      <a href="#" class="read-btn">Read More</a> 
+                                    </span>
+                              </div>   
+                  </div>
+              </div>
+            </div>             
+            </section>                       
+            <footer>
+                     <p>Copyright 2014 All Rights Reserved by <a href="#">Skill Drill</a><p>
+            </footer><!-- footer end -->    
+</div><!-- wrapper end -->   
+</body>
+</html>

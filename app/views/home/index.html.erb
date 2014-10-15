@@ -70,9 +70,11 @@
                         <li><a href="/about">About Us</a></li>
                         <li><a>Our Cources</a>
                             <ul class="sub-menu">
+
                            <% @courses.each do |c| %>
                            <li><%= link_to c.title, {:action => 'cource_detail', :id => c.id } -%></li>
                            <% end %> 
+
                           </ul>
                         </li>
                         <li><a href="#">Blog</a></li>
@@ -91,11 +93,16 @@
             <section class="stu-tetis shadow margin">
                     <div class="col-5">
                         <div class="shadow box padding">
-                          <img src="/assets/img2.jpg" alt="img">
-                        </div>    
+                            <object width="0" height="0">
+                                <param name="movie" value="http://www.youtube.com/v/DIuXtsaUDmM?fs=1&amp;hl=en_US"></param>
+                                <param name="allowFullScreen" value="true"></param>
+                                <param name="allowscriptaccess" value="always"></param>
+                                <embed src="http://www.youtube.com/v/DIuXtsaUDmM?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="100%" height="100%"></embed>
+                            </object>
+                        </div>
                     </div>
                     <div class="col-7">
-                        <h2>Studetn Testimonials</h2>
+                        <h2>Student Testimonials</h2>
                         <p>See what our graduates have to say about how Digital Marketing Institute programmes helped their careers.</p>
                         <div class="boxs clr col">
                             <div class="col-4">
@@ -168,7 +175,7 @@
                     <div class="col-7">
                         <h2>Corporate Traning</h2>
                            <h3>We offer flexible and tailored Corporate Training packages that match your business objectives.
-                                <a href="/corporate-training">Find out more here.</a>
+                                <a href="/placement">Find out more here.</a>
                            </h3> 
                         <div class="para">
                             The lecturers were excellent. They were experts in their field but most importantly they were practical teachers. We were able to apply what we learned to our own business through examples they showed us.
