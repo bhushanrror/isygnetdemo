@@ -1,6 +1,6 @@
 ActiveAdmin.register Testimonial do
 
- # permit_params :title, :body, :feature_image, :type, :status
+ permit_params :title, :body, :feature_image, :type, :status
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -21,17 +21,5 @@ ActiveAdmin.register Testimonial do
     #f.actions
   #end
 
-	controller do
-		def permitted_params
-			params.permit testimonial: [:title, :body, :feature_image, :type, :status]
-		end
-	end
-
 	
-	form :html => { :enctype => "multipart/form-data" } do |f|  
-  		f.inputs do
-    		f.input :feature_image, :as => :file
-  		end
-		f.actions
-	end
 end

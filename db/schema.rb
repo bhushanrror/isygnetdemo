@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 20141013053134) do
     t.text     "title"
     t.text     "description"
     t.text     "duration"
-    t.decimal  "fees",          precision: 8, scale: 2
-    t.string   "feature_image"
+    t.decimal  "fees",                    precision: 8, scale: 2
+    t.string   "feature_image_file_name"
     t.boolean  "status"
     t.integer  "batch_id"
     t.datetime "created_at"
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 20141013053134) do
   create_table "testimonials", force: true do |t|
     t.string   "title"
     t.text     "body"
-    t.string   "feature_image"
+    t.string   "feature_image_file_name"
     t.text     "type"
     t.boolean  "status"
     t.datetime "created_at"
