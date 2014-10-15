@@ -7,7 +7,7 @@ Isygnetdemo::Application.routes.draw do
   resources :home
   get '/about/', to: 'home#about', as: 'about'
 
-  get '/cource_detail/', to: 'home#cource_detail', as: 'cource_detail'
+  get '/course_detail/', to: 'home#course_detail', as: 'course_detail'
   
   #get '/cources/' to:'home#cources', as: 'cources'
 

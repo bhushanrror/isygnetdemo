@@ -71,7 +71,7 @@
                         <li><a>Our Cources</a>
                             <ul class="sub-menu">
                            <% @courses.each do |c| %>
-                           <li><%= link_to c.title, {:action => 'cource_detail', :id => c.id } -%></li>
+                           <li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
                            <% end %> 
                           </ul>
                         </li>

@@ -54,10 +54,10 @@
                     <ul class="fr menu-pills menu">
                         <li><a href="/home" class="active">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="cource_detail">Our Cources</a>
+                        <li><a> Our Cources</a>
                           <ul class="sub-menu">
-                              <% @courses.each do |c| %>
-                            <li><%= link_to c.title, {:action => 'cource_detail', :id => c.id } -%></li>
+                            <% @courses.each do |c| %>
+                           <li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
                             <% end %>
                           </ul>
                         </li>
@@ -144,7 +144,7 @@
             </div>       
             </section>                       
             <footer>
-                     <p>Copyright 2014 All Rights Reserved by <a href="#">Skill Drill</a><p>
+                     <p>Copyright 2014 All Rights Reserved by <a href="#">isygnet</a><p>
             </footer><!-- footer end -->    
 </div><!-- wrapper end -->   
 </body>
