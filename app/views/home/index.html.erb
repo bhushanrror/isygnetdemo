@@ -23,9 +23,22 @@
                });
                });
         </script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.input-control').change(function(){
+			var course = $('.input-control').val();
+			if(course){
+				var url = "/home/"+course;    
+				$(location).attr('href',url);
+			}
+			
+		});	
+	});
+</script>
 </head>
 
 <body>
+
 <%= puts "Hello " %>
 <header>
 	<div class="wrapper">
@@ -55,12 +68,11 @@
                     <ul class="fr menu-pills menu">
                         <li><a href="/home" class="active">Home</a></li>
                         <li><a href="/about">About Us</a></li>
-                        <li><a href="#">Our Cources</a>
+                        <li><a>Our Cources</a>
                             <ul class="sub-menu">
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
+                           <% @courses.each do |c| %>
+                           <li><%= link_to c.title, {:action => 'cource_detail', :id => c.id } -%></li>
+                           <% end %> 
                           </ul>
                         </li>
                         <li><a href="#">Blog</a></li>
@@ -128,11 +140,12 @@
                         <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
                         <div class="input-group">
                             <select class="input-control">
-                               <option>Select a course</option>
-                               <option>2</option>
-                               <option>3</option>
-                               <option>4</option>
-                               <option>5</option>
+                            	<option>Select Options</option>
+                               <% @courses.each do |c| %>
+                               <option value="<%= c.id %>"><li><%= link_to c.title, {:action => 'show', :id => c.id } -%></li></option>
+
+                            <% end %>
+                               
                             </select>
                         </div>
                         <div class="clr"></div>        
