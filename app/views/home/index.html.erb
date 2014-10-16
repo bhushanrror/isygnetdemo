@@ -106,7 +106,8 @@
             </section><!-- slider end -->
             <section class="stu-tetis shadow margin">
             <!-- Add student testimonial from testimonial object -->
-            <% @testimonials[0..3].each_with_index do |testimonial, index| %>
+
+            <% @testimonials[0..4].each_with_index do |testimonial, index| %>
                 <% if (index == 0) then %>
                     <div class="col-5">
                         <div class="shadow box padding">
@@ -125,10 +126,17 @@
                                      <%= image_tag testimonial.pic.url(:thumb) %>
                                 </a>
                         </div>
-                <% end %>                                     
-            <% end %>
+                <% end %>
+                <% if (index == 3) then %> 
                     </div>
-            </div>   
+                    </div>   
+                <% elsif (@testimonials.size == (index-1)) %> 
+                    </div>
+                    </div>   
+                <% end %>
+
+            <% end %>
+                    
             </section>
             <section class="maping shadow">
                     <div class="col-5">
