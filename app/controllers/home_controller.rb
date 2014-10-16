@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 	def index
 		@courses = Course.find(:all)
 		@recruiters = RecruitmentPartner.all
+		@testimonials = Testimonial.all
 	end
 
 	def about

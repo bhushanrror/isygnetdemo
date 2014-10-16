@@ -3,9 +3,12 @@ class CreateTestimonials < ActiveRecord::Migration
     create_table :testimonials do |t|
     	t.string :title
     	t.text :body
-    	t.string :feature_image_file_name
     	t.text :type
     	t.boolean :status
+        t.string :pic_file_name
+        t.string :pic_content_type
+        t.integer :pic_file_size
+        t.datetime :pic_updated_at
     	t.timestamps
     end
   end

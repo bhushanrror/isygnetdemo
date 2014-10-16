@@ -86,37 +86,30 @@
                 <img src="/assets/img1.jpg">
             </section><!-- slider end -->
             <section class="stu-tetis shadow margin">
+            <!-- Add student testimonial from testimonial object -->
+            <% @testimonials[0..3].each_with_index do |testimonial, index| %>
+                <% if (index == 0) then %>
                     <div class="col-5">
                         <div class="shadow box padding">
-                            <object width="0" height="0">
-                                <param name="movie" value="http://www.youtube.com/v/DIuXtsaUDmM?fs=1&amp;hl=en_US"></param>
-                                <param name="allowFullScreen" value="true"></param>
-                                <param name="allowscriptaccess" value="always"></param>
-                                <embed src="http://www.youtube.com/v/DIuXtsaUDmM?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="100%" height="100%"></embed>
-                            </object>
-                        </div>
-                    </div>
+                            <a href="#" >
+                                <%= image_tag testimonial.pic.url(:medium) %>
+                            </a>
+                        </div>  
+                    </div>  
                     <div class="col-7">
                         <h2>Student Testimonials</h2>
-                        <p>See what our graduates have to say about how Digital Marketing Institute programmes helped their careers.</p>
+                        <p>See what our graduates have to say about how Digital Marketing Institute programmes helped their careers.</p>                       
                         <div class="boxs clr col">
-                            <div class="col-4">
+                <% else %>  
+                        <div class="col-4">
                                 <a href="#" class="thumbs shadow">
-                                    <img  src="/assets/img3.jpg" alt="img">
+                                     <%= image_tag testimonial.pic.url(:thumb) %>
                                 </a>
-                            </div>
-                            <div class="col-4">
-                                <a href="#" class="thumbs shadow">
-                                    <img  src="/assets/img3.jpg" alt="img">
-                                </a>
-                            </div>
-                            <div class="col-4">
-                                <a href="#" class="thumbs shadow">
-                                    <img  src="/assets/img3.jpg" alt="img">
-                                </a>
-                            </div>
                         </div>
+                <% end %>                                     
+            <% end %>
                     </div>
+            </div>   
             </section>
             <section class="maping shadow">
                     <div class="col-5">

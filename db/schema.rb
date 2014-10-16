@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013053134) do
+ActiveRecord::Schema.define(version: 20141016100129) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -59,10 +59,13 @@ ActiveRecord::Schema.define(version: 20141013053134) do
     t.text     "title"
     t.text     "description"
     t.text     "duration"
-    t.decimal  "fees",                    precision: 8, scale: 2
-    t.string   "feature_image_file_name"
+    t.decimal  "fees",             precision: 8, scale: 2
     t.boolean  "status"
     t.integer  "batch_id"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -72,8 +75,11 @@ ActiveRecord::Schema.define(version: 20141013053134) do
   create_table "recruitment_partners", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "feature_image"
     t.boolean  "status"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -87,10 +93,12 @@ ActiveRecord::Schema.define(version: 20141013053134) do
 
   create_table "testimonials", force: true do |t|
     t.string   "title"
-    t.text     "body"
-    t.string   "feature_image_file_name"
-    t.text     "type"
+    t.text     "videourl"
     t.boolean  "status"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
