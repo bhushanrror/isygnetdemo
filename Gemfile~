@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
+gem 'rambling-slider-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -27,6 +28,9 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+# include peperclip gem for image upload
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
