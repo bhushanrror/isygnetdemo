@@ -5,7 +5,9 @@
 <title>Skill Drill</title>
         <meta name="viewport" content="width=device-width">
         <script type='text/javascript' src='js/jquery.js'></script>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="stylesheets/responsiveslides.css">
+        <script src="javascripts/responsiveslides.min.js"></script>
         <script>
            $(function() {
                var pull = $('.menu-btn');
@@ -21,6 +23,9 @@
                menu.removeAttr('style');
                }
                });
+               $("#slider1").responsiveSlides({
+               speed: 800
+               });
                });
         </script>
 		<script type="text/javascript">
@@ -34,7 +39,10 @@
 				
 			});	
 			});
-</script>
+    </script>
+        
+
+
 </head>
 
 <body>
@@ -83,7 +91,13 @@
 <!-- header end -->
 <div class="wrapper clr">
             <section class="slider shadow">
-                <img src="/assets/img1.jpg">
+                <!-- <img src="/assets/img1.jpg"> -->
+                <ul class="rslides" id="slider1">
+                  <li><img src="/assets/img1.jpg" alt=""></li>
+                  <li><img src="/assets/1.jpg" alt=""></li>
+                  <li><img src="/assets/2.jpg" alt=""></li>
+                  <li><img src="/assets/3.jpg" alt=""></li>
+                </ul>
             </section><!-- slider end -->
             <section class="stu-tetis shadow margin">
             <!-- Add student testimonial from testimonial object -->
@@ -125,6 +139,8 @@
                     </div>
             </section><!-- maping end -->
             <section class="courses shadow">
+
+                   
                     <div class="col-7">
                         <div class="phone-img">
                             <img src="/assets/img4.jpg">
@@ -136,16 +152,15 @@
                         <div class="input-group">
                             <select class="input-control">
                             	<option>Select Options</option>
-                               <% @courses.each do |c| %>
-                               <option value="<%= c.id %>"><li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%>
-                               </li>
-                               </option>
-                            <% end %>
+                                <% @courses.each do |c| %>
+                                    <option value="<%= c.id %>"><li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
+                                    </option> 
+                                <% end %>                          
                             </select>
                         </div>
-                        <div class="clr"></div>        
-                        <button type="submit" class="btn-normal">CONTACT THE TEAM</button>
-                    </div>
+                        <div class="clr"></div> 
+                            <button type="submit" class="btn-normal">GO TO THE COURSE</button>
+                        </div>
             </section><!-- courses end -->
             <section class="partner-slider shadow">
                     <h2>Our Recruitment Partner</h2>
@@ -177,7 +192,7 @@
                     </div>
             </section><!-- traning end -->
             <footer>
-                     <p>Copyright 2014 All Rights Reserved by <a href="#">iSygnet</a><p>
+                     <p>Copyright 2014 All Rights Reserved by <a href="/home">iSygnet</a><p>
             </footer><!-- footer end -->    
 </div><!-- wrapper end -->   
 </body>

@@ -96,54 +96,32 @@
                             As well as validation from industry, our programmes are also fully accredited by the Scottish Qualifications Authority and recognised around the world.</br>
                             Our learning options are completely flexible &ndash; you can study full time, part time or online. And if you miss a class due to work commitments, you can always catch up online.</br>
                             By taking a course with the Digital Marketing Institute, you will come away with an actionable Digital Marketing strategy for your business and the skills and knowledge to immediately implement a Digital campaign.</p>  
-                   <p class="text-centre"><button type="submit" class="btn-normal">Contact Us</button></p>                                 
+                   <p class="text-centre"><button type="submit" class="btn-normal" onclick="window.location.href='/contact'">Contact Us</button></p> 
+                                                  
  						  </div>   
                 <div class="clr"></div>
                  <div class="col">
-                      <div class="col-12 mid-head">
+                    <div class="col-12 mid-head">
                         You can also check courses
-                      </div>
-                    <div class="col-12">
-                        <div class="col-4">
-                              <div class="course-img">
-                                    <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>Android courses</p>
-                                      <a href="#" class="read-btn">Read More</a> 
-                                    </span>
-                              </div>
-                                
-                        </div>
-                        <div class="col-4">
-                               <div class="course-img">
-                                    <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>Android courses</p>
-                                      <a href="#" class="read-btn">Read More</a> 
-                                    </span>
-                              </div> 
-                        </div>
-                        <div class="col-4">
-                               <div class="course-img">
-                                    <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>Android courses</p>
-                                      <a href="#" class="read-btn">Read More</a> 
-                                    </span>
-                              </div>
-                        </div>
                     </div>
-               <div class="col-12">
-                    <div class="col-4">
-                           <div class="course-img">
+                    	<div class="col-12">
+                          		<% @courses.each do |c| %>
+                          		<div class="col-4">
+                                <div class="course-img">
                                     <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>Android courses</p>
-                                      <a href="#" class="read-btn">Read More</a> 
-                                    </span>
-                             </div>  
-                    </div>
-              </div>    
-            </div>       
+                                    <span class="caption"><p value="<%= c.title %>">
+                                   		<li style="float: left;"><%= c.title %>
+                                   	</span>
+        	                    	</li>
+        	                    	<a href="course_detail?id=<%= c.id %>" class="read-btn">Read More</a>
+        	                    </div>  	                	    
+                        		</div>
+                        		<% end %>
+                    	</div>
+               		</div>       
             </section>                       
             <footer>
-                     <p>Copyright 2014 All Rights Reserved by <a href="#">isygnet</a><p>
+                     <p>Copyright 2014 All Rights Reserved by <a href="/home">iSygnet</a><p>
             </footer><!-- footer end -->    
 </div><!-- wrapper end -->   
 </body>
