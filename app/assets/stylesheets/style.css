@@ -26,7 +26,7 @@ h1.logo {margin-top: 19px;}.logo img{width: auto;}
 .social span {color: #393939;float: left;font-size: 16px;margin: 6px;}
 .social-icon{overflow:visible; margin-bottom: 30px;}
 .social-icon li {margin-right: 5px; float: left;}
-.social-icon li a {background-image: url("/assets/icon1.png");border-radius: 90px;height: 28px;width: 27px;opacity: 0.8; display: block; background-repeat: no-repeat;background-position: 0 0;}
+.social-icon li a {background-image: url("/assets/icon.png");border-radius: 90px;height: 28px;width: 27px;opacity: 0.8; display: block; background-repeat: no-repeat;background-position: 0 0; transition:all 0.25s linear 0s;}
 .social-icon li a:hover {opacity:1;}
 .social-icon li a.g-plus {background-position: -36px 0;}
 .social-icon li a.tweet {background-position: -70px 0;}
@@ -39,11 +39,11 @@ h1.logo {margin-top: 19px;}.logo img{width: auto;}
 .phone-num-img {background-image: url("/assets/phone.png");background-repeat: no-repeat;display: block;float: left;height: 30px;margin-right: 10px;width: 30px;}
 nav ul.menu-pills{background-color: #3E3E3E; padding: 0px; border-radius: 3px; /*overflow: visible;*/margin-bottom: 10px;}
 nav ul li{float: left;position: relative;}
-nav ul.menu-pills li a{padding:10px 20px; color:#f9f9f9; display: block; font-size: 16px; border-right: 1px solid #565656;}
+nav ul.menu-pills li a{padding:10px 20px; color:#f9f9f9; display: block; font-size: 16px; border-right: 1px solid #565656;transition:all 0.25s linear 0s;text-decoration: none;}
 nav ul.menu-pills li a:hover{ background-color:#1A1A1A; border-radius: 0px;}
 nav ul.menu-pills li a.active{background-color:#1A1A1A;}
 .navbar-hidden{display: none;}
-.fr.menu-pills.menu ul.sub-menu {background-color: #3e3e3e;min-width: 130px;position: absolute;top: 42px;z-index: 999999; display: none;}
+.fr.menu-pills.menu ul.sub-menu {background-color: #3e3e3e;min-width: 130px;position: absolute;top: 42px;z-index: 999999; display: none;transition:all 0.25s linear 0s}
 .fr.menu-pills.menu ul.sub-menu li {border: medium none;float: left;width: 100%;}
 nav ul.menu-pills.menu li:hover ul.sub-menu{display: block;}
 /*ul.menu {overflow: hidden;}*/
@@ -130,8 +130,8 @@ textarea.input-control {height: auto;}
 .contact .col-6 span {color: #555; font-size: 16px; font-weight: bold;}
 .contact .col-6 address a {display: block;}
 .contact button {margin-top:0px;}
-.contact address p.phone a {background-image: url("/assets/icon1.png");background-position: 0 -39px; background-repeat: no-repeat; padding-left: 32px;}
-.contact address p.email a {background-image: url("/assets/icon1.png");background-position: 0 -59px; background-repeat: no-repeat; padding-left: 32px;}
+.contact address p.phone a {background-image: url("/assets/icon.png");background-position: 0 -39px; background-repeat: no-repeat; padding-left: 32px;}
+.contact address p.email a {background-image: url("/assets/icon.png");background-position: 0 -59px; background-repeat: no-repeat; padding-left: 32px;}
 .contact .input_field {margin-bottom: 10px;}
 .contact span.getintouch {display: inline-block;font-family: "DroidSerifRegular";font-size: 20px;margin-bottom: 10px;}
 /* footer css */

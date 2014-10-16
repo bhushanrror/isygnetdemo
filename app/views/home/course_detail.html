@@ -89,13 +89,11 @@
                       <img src="/assets/tlabs-php-course.png" width="100%">                         
                     </div>
                     <div class="col-8">    
-                              <h2><%= @course.title%></h2> 
-                              <p><%= @course.description%></p>
-                              <p><%= @course.duration%></p>
-                              <p><%= @course.fees%></p>                            
-                              <p><%= @course.status%></p>
-                              
-                              <p></p>           
+                              <h2>Course Name: <%= @course.title%></h2> 
+                              <p>Description: <%= @course.description%></p>
+                              <p>Duration: <%= @course.duration%></p>
+                              <p>Fees: <%= @course.fees%></p>                            
+                              <p>Status: <%= @course.status%></p>                       
                        <button type="submit" class="btn-normal course-shed-btn">Schedule of Cources</button>                 
    						      </div>
                 </div>    
@@ -105,36 +103,25 @@
                 You can also check Cources
               </div>
               <div class="col-12">
-                  <div class="col-4">
-                            <div class="course-img">
+
+                  <% @courses.each do |c| %>
+                              <div class="col-4">
+                                <div class="course-img">
                                     <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption">
-                                    <p>BE</p>
-                                      <a href="/course_detail?id=1" class="read-btn">Read More</a> 
+                                    <span class="caption"><p value="<%= c.title %>">
+                                      <li style="float: left;"><%= c.title %>
                                     </span>
-                              </div>
-                  </div>
-                  <div class="col-4">
-                            <div class="course-img">
-                                    <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>graduation</p>
-                                      <a href="/course_detail?id=2" class="read-btn">Read More</a> 
-                                    </span>
-                              </div>  
-                  </div>
-                  <div class="col-4">
-                           <div class="course-img">
-                                    <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p>abcd</p>
-                                      <a href="/course_detail?id=3" class="read-btn">Read More</a> 
-                                    </span>
-                              </div>   
-                  </div>
+                                </li>
+                                <a href="course_detail?id=<%= c.id %>" class="read-btn">Read More</a>
+                              </div>                          
+                            </div>
+                  <% end %>
+
               </div>
             </div>             
             </section>                       
             <footer>
-                     <p>Copyright 2014 All Rights Reserved by <a href="#">isygnet</a><p>
+                     <p>Copyright 2014 All Rights Reserved by <a href="/home">iSygnet</a><p>
             </footer><!-- footer end -->    
 </div><!-- wrapper end -->   
 </body>
