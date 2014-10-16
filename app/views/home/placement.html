@@ -27,43 +27,41 @@
 </head>
 <body>
 <header>
-	<div class="wrapper">
-    	<div class="col">
-        	  <div class="col-4">
-              <h1 class="logo"><a href="index.html"><img src="/assets/isygnet-logo-final.png"></a></h1>
+  <div class="wrapper">
+      <div class="col">
+          <div class="col-4">
+              <h1 class="logo"><a href= "/home" ><img src="/assets/isygnet-logo-final.png"></a></h1>
             </div>
             <div class="col-8">
-            	<div class="fr clr social">
-                	<span>Stay Connected:</span>
-                	<ul class="social-icon fr">
-						<li><a href="#" class="facebook">&nbsp;</a></li>
+              <div class="fr clr social">
+                  <span>Stay Connected:</span>
+                  <ul class="social-icon fr">
+            <li><a href="#" class="facebook">&nbsp;</a></li>
                         <li><a href="#" class="g-plus">&nbsp;</a></li>
-						<li><a href="#" class="tweet">&nbsp;</a></li>
+            <li><a href="#" class="tweet">&nbsp;</a></li>
                         <li><a href="#" class="rss">&nbsp;</a></li>
-						<li><a href="#" class="vimeo">&nbsp;</a></li>
-                        <li><a href="#" class="linkedin">&nbsp;</a></li>						
-					</ul>
+            <li><a href="#" class="vimeo">&nbsp;</a></li>
+                        <li><a href="#" class="linkedin">&nbsp;</a></li>            
+          </ul>
                 </div>
                 <div class="fr phone-number clr">
-                	<span class="phone-num-img">&nbsp;</span>
-                	<span class="phone-text">Contact us: </span>
+                  <span class="phone-num-img">&nbsp;</span>
+                  <span class="phone-text">Contact us: </span>
                     <span class="number">(<small>020</small>) 6419808</span>
                 </div>
                 <nav class="clr fr">
                     <a class="menu-btn" href="javascript:void(0);">Menu</a>
                     <ul class="fr menu-pills menu">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Cources</a>
+                        <li><a href="/home" class="active">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a>Our courses</a>
                             <ul class="sub-menu">
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
-                              <li><a href="#">Php Cource</a></li>
+                           <% @courses.each do |c| %>
+                           <li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
+                           <% end %> 
                           </ul>
-                        </li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        </li>                        
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>

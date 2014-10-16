@@ -26,7 +26,7 @@ h1.logo {margin-top: 19px;}.logo img{width: auto;}
 .social span {color: #393939;float: left;font-size: 16px;margin: 6px;}
 .social-icon{overflow:visible; margin-bottom: 30px;}
 .social-icon li {margin-right: 5px; float: left;}
-.social-icon li a {background-image: url("/assets/icon.png");border-radius: 90px;height: 28px;width: 27px;opacity: 0.8; display: block; background-repeat: no-repeat;background-position: 0 0;}
+.social-icon li a {background-image: url("/assets/icon1.png");border-radius: 90px;height: 28px;width: 27px;opacity: 0.8; display: block; background-repeat: no-repeat;background-position: 0 0;}
 .social-icon li a:hover {opacity:1;}
 .social-icon li a.g-plus {background-position: -36px 0;}
 .social-icon li a.tweet {background-position: -70px 0;}
@@ -130,8 +130,8 @@ textarea.input-control {height: auto;}
 .contact .col-6 span {color: #555; font-size: 16px; font-weight: bold;}
 .contact .col-6 address a {display: block;}
 .contact button {margin-top:0px;}
-.contact address p.phone a {background-image: url("/assets/icon.png");background-position: 0 -39px; background-repeat: no-repeat; padding-left: 32px;}
-.contact address p.email a {background-image: url("/assets/icon.png");background-position: 0 -59px; background-repeat: no-repeat; padding-left: 32px;}
+.contact address p.phone a {background-image: url("/assets/icon1.png");background-position: 0 -39px; background-repeat: no-repeat; padding-left: 32px;}
+.contact address p.email a {background-image: url("/assets/icon1.png");background-position: 0 -59px; background-repeat: no-repeat; padding-left: 32px;}
 .contact .input_field {margin-bottom: 10px;}
 .contact span.getintouch {display: inline-block;font-family: "DroidSerifRegular";font-size: 20px;margin-bottom: 10px;}
 /* footer css */
