@@ -1,0 +1,9 @@
+<%= semantic_form_for [:admin, @setting] do |f| %>
+	<label>Title</label><br />
+    <%=f.text_field :settingkey%><br />
+    <label>Video Url</label><br />
+    <%=f.text_field :settingvalue %><br />
+ 
+	
+    <%= f.actions  %>
+<% end %>

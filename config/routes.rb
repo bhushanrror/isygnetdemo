@@ -9,6 +9,7 @@ Isygnetdemo::Application.routes.draw do
   get '/course_detail/', to: 'home#course_detail', as: 'course_detail'
   get '/contact/', to: 'home#contact', as: 'contact'
   get '/placement/', to: 'home#placement', as: 'placement'  
+  post '/sendmail', to: 'home#sendmail', as: 'sendmail'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
