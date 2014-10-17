@@ -8,6 +8,8 @@
         <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="stylesheets/responsiveslides.css">
         <script src="javascripts/responsiveslides.min.js"></script>
+
+
         <script>
            $(function() {
                var pull = $('.menu-btn');
@@ -26,8 +28,50 @@
                $("#slider1").responsiveSlides({
                speed: 800
                });
+               
+
                });
         </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            *   Examples - images
+            */
+
+            
+
+            $("a#example3").fancybox({
+                'transitionIn'  : 'none',
+                'transitionOut' : 'none'    
+            });
+
+            
+
+            $("a[rel=example_group]").fancybox({
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none',
+                'titlePosition'     : 'over',
+                'titleFormat'       : function(title, currentArray, currentIndex, currentOpts) {
+                    return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+                }
+            });
+
+            /*
+            *   Examples - various
+            */
+
+            
+            $("#various3").fancybox({
+                'width'             : '75%',
+                'height'            : '75%',
+                'autoScale'         : false,
+                'transitionIn'      : 'none',
+                'transitionOut'     : 'none',
+                'type'              : 'iframe'
+            });
+
+        });
+    </script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 			$('.input-control').change(function(){
@@ -102,11 +146,11 @@
             <section class="stu-tetis shadow margin">
             <!-- Add student testimonial from testimonial object -->
 
-            <% @testimonials[0..4].each_with_index do |testimonial, index| %>
+            <% @testimonials[0..3].each_with_index do |testimonial, index| %>
                 <% if (index == 0) then %>
                     <div class="col-5">
                         <div class="shadow box padding">
-                            <a href="#" >
+                            <a id="various3" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
                                 <%= image_tag testimonial.pic.url(:medium) %>
                             </a>
                         </div>  
