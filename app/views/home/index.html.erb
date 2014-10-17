@@ -227,11 +227,13 @@
                     <h2>Our Recruitment Partner</h2>
                     <div class="slider-img fixed-bar">         
                         <ul id="carousel" class="elastislide-list">
-                            <li><a href="#"><img src="/assets/img5.jpg"></a></li>
-                            <li><a href="#"><img src="/assets/img6.jpg"></a></li>
-                            <li><a href="#"><img src="/assets/img7.jpg"></a></li>
-                            <li><a href="#"><img src="/assets/img8.jpg"></a></li>
-                            <li><a href="#"><img src="/assets/img9.jpg"></a></li>              
+                        <% @recruiters[0..3].each do |recruiter| %>
+                            <li>
+                                <a href="#" >
+                                    <%= image_tag recruiter.pic.url(:medium) %>
+                                </a>
+                            </li>
+                        <% end %>        
                         </ul>
                     </div>
             </section> <!-- partner-slider end -->

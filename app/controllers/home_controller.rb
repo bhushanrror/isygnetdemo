@@ -14,9 +14,15 @@ class HomeController < ApplicationController
 		@course = Course.find(params[:id])
 	end	
 	def contact
+		@user = User.new
 		@courses = Course.find(:all)
 	end
 	def placement
+		@courses = Course.find(:all)
 		@testimonial = Testimonial.all
+	end
+	def sendmail		
+		puts @user
+		#UserMailer.welcome_email(@user).deliver
 	end
 end
