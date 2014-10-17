@@ -86,14 +86,14 @@
             <div class="col cours-she">
                  <div class="col-12 border-bottom">
                     <div class="col-4">
-                      <img src="/assets/tlabs-php-course.png" width="100%">                         
+                    <img src="<%= @course.pic%>" width="100%">                      
                     </div>
                     <div class="col-8">    
                               <h2>Course Name: <%= @course.title%></h2> 
                               <p>Description: <%= @course.description%></p>
                               <p>Duration: <%= @course.duration%></p>
-                              <p>Fees: <%= @course.fees%></p>                            
-                              <p>Status: <%= @course.status%></p>                       
+                              <p>Fees: <%= @course.fees%></p>  
+
                        <button type="submit" class="btn-normal course-shed-btn">Schedule of Cources</button>                 
    						      </div>
                 </div>    
@@ -107,11 +107,9 @@
                   <% @courses.each do |c| %>
                               <div class="col-4">
                                 <div class="course-img">
-                                    <img src="/assets/tlabs-php-course.png" alt="img">
-                                    <span class="caption"><p value="<%= c.title %>">
-                                      <li style="float: left;"><%= c.title %>
-                                    </span>
-                                </li>
+                                	<%= image_tag c.pic.url(:medium) %>
+                                    <span class="caption"><p value="<%= c.title %>"></span>
+                                      <li style="float: left;"><%= c.title %> </li>
                                 <a href="course_detail?id=<%= c.id %>" class="read-btn">Read More</a>
                               </div>                          
                             </div>

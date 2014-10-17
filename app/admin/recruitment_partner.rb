@@ -1,6 +1,6 @@
 ActiveAdmin.register RecruitmentPartner do
 
-  permit_params :title, :description, :feature_image, :status
+  permit_params :title, :description, :pic, :status
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
