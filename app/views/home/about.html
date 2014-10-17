@@ -88,7 +88,7 @@
             <div class="col-12 border-bottom">
 
                           <div class="about-slider fl">
-                            <img src="/assets/tlabs-php-course.png">
+                            <img src="/assets/android.jpg">
                              <span class="caption">Android courses</span>
                           </div> 
                             <p>The Digital Marketing Institute is setting the global standard for Digital Marketing education. We specialise in Digital Marketing &ndash; nothing else &ndash; and by the end of 2014 we will have trained 11,000 people across four continents.</br>
@@ -108,11 +108,10 @@
                           		<% @courses.each do |c| %>
                           		<div class="col-4">
                                 <div class="course-img">
-                                    <img src="/assets/tlabs-php-course.png" alt="img">
+                                    <%= image_tag c.pic.url (:medium) %>
                                     <span class="caption"><p value="<%= c.title %>">
-                                   		<li style="float: left;"><%= c.title %>
-                                   	</span>
-        	                    	</li>
+                                   		<li style="float: left;"><%= c.title %></li>
+                                   	</span>        	                    	
         	                    	<a href="course_detail?id=<%= c.id %>" class="read-btn">Read More</a>
         	                    </div>  	                	    
                         		</div>

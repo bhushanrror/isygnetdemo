@@ -23,8 +23,5 @@ ActiveAdmin.register Testimonial do
   # ************ we have implementd the same form as above by using partials
   # to find the currenrt form in view go to admin users and then _form.html.erb
   form :partial => "form"
- 
-  # *************
 
-	
 end

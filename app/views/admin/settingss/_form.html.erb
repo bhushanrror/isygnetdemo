@@ -1,0 +1,14 @@
+<%= semantic_form_for [:admin, @settings] do |f| %>
+
+	<label>Key</label><br />
+    <%=f.text_field :setting_key %><br />
+
+    <label>Value</label><br />
+    <%= f.text_field :setting_value %><br /> 
+
+    <%= f.actions  %>
+
+<% end %>
+
+
+  
