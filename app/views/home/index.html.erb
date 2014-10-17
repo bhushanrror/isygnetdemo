@@ -74,12 +74,17 @@
     </script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-			$('.input-control').change(function(){
-				var course = $('.input-control').val();
+            $('.msg').val('');
+			$('.btn-normal').on("click" , function(e){
+				
+                var course = $('.input-control').val();
 				if(course){
 					var url = "/course_detail?id="+course;    
 					$(location).attr('href',url);
-				}
+				}else{
+                    $('.msg').append('Please select value!');
+                    e.preventDefault;
+                }
 				
 			});	
 			});
@@ -203,7 +208,7 @@
                         <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
                         <div class="input-group">
                             <select class="input-control">
-                            	<option>Select Options</option>
+                            	<option value="">Select Options</option>
                                 <% @courses.each do |c| %>
                                     <option value="<%= c.id %>"><li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
                                     </option> 
@@ -211,6 +216,7 @@
                             </select>
                         </div>
                         <div class="clr"></div> 
+                            <span class="msg"></span><br />
                             <button type="submit" class="btn-normal">GO TO THE COURSE</button>
                         </div>
             </section><!-- courses end -->

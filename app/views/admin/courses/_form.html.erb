@@ -1,0 +1,18 @@
+  <%= semantic_form_for [:admin, @course] do |f| %>
+    <label>Title</label><br />
+    <%=f.text_field :title,:label => "Title" %><br />
+    <label>Description</label><br />
+    <%= f.text_area :description %><br/>
+    <label>Dduratio</label><br />
+    <%= f.text_field :duration %><br/>
+    <label>Fees</label><br />
+    <%= f.text_field :fees %><br />
+    <label>Image</label><br />
+    <%= f.file_field :pic %><br />
+    <label>Status</label><br />
+    <%=f.check_box :status, :checked => true %><br />
+
+    <%= f.actions  %>
+
+  <% end %>
+ 
