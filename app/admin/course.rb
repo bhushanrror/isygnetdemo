@@ -1,6 +1,21 @@
 ActiveAdmin.register Course do
-  permit_params :title, :description, :duration, :fees, :feature_image, :status, :batch
+  permit_params :title, :description, :duration, :fees, :pic, :status, :batch
    
+  
+    form :partial => "form"
+=begin
+
+   form do |f|
+      f.inputs "Details" do
+        f.input :title
+        f.input :description
+        f.input :duration
+    
+      f.actions
+    end
+  end
+=end
+end
 =begin
   index do |f|
     f.input :title
@@ -25,7 +40,4 @@ ActiveAdmin.register Course do
    # permitted = [:permitted, :attributes]
    #permitted << :other if resource.something?
    # permitted
-  #end
 
-
-end
