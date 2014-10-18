@@ -32,60 +32,34 @@
 
                });
         </script>
-        <script type="text/javascript">
-        $(document).ready(function() {
-            /*
-            *   Examples - images
-            */
+       
+    <script type="text/javascript">
+   /* $(document).ready(function(){
+        alert(0);
+    });*/
 
-            
-
-            $("a#example3").fancybox({
-                'transitionIn'  : 'none',
-                'transitionOut' : 'none'    
-            });
-
-            
-
-            $("a[rel=example_group]").fancybox({
-                'transitionIn'      : 'none',
-                'transitionOut'     : 'none',
-                'titlePosition'     : 'over',
-                'titleFormat'       : function(title, currentArray, currentIndex, currentOpts) {
-                    return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
-                }
-            });
-
-            /*
-            *   Examples - various
-            */
-
-            
-            $("#various3").fancybox({
-                'width'             : '75%',
-                'height'            : '75%',
-                'autoScale'         : false,
-                'transitionIn'      : 'none',
-                'transitionOut'     : 'none',
-                'type'              : 'iframe'
-            });
-
-        });
     </script>
 		<script type="text/javascript">
-			$(document).ready(function(){
+			
+            $(document).ready(function(){
             $('.msg').val('');
-			$('.btn-normal').on("click", function(e){
-				
-                var course = $('.input-control').val();
-				if(course){
-					var url = "/course_detail?id="+course;    
-					$(location).attr('href',url);
-				}else{
-                    $('.msg').append('Please select value!');
-                    e.preventDefault;
-                }
-			});
+    			$('.btn-normal').on("click", function(e){
+    				
+                    var course = $('.input-control').val();
+    				if(course){
+    					var url = "/course/"+course;    
+    					$(location).attr('href',url);
+    				}else{
+                        $('.msg').append('Please select value!');
+                        e.preventDefault;
+                    }
+    			}); 
+
+                $('.input-control').on("change", function(e){
+                    alert(0); return false;
+                    
+                }); 
+
 			});
     </script>
 </head>
@@ -145,10 +119,12 @@
                         <li><a href="/about">About Us</a></li>
                         <li><a>Our courses</a>
                             <ul class="sub-menu">
-                                <% @courses.each do |c| %>
-                                    <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></li>
-                                <% end %>
-                            </ul>
+
+                           <% @courses.each do |c| %>
+                              <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } %></li>
+                           <% end %> 
+                          </ul>
+
                         </li>                        
                         <li><a href="/contact">Contact Us</a></li>
                     </ul>
@@ -226,10 +202,16 @@
                         <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
                         <div class="input-group">
                             <select class="input-control">
-                                <option value="">Select Options</option>    
+                                <option value=""> Select option</option>
                                 <% @courses.each do |c| %>
-                                    <option><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></option>
-                                <% end %>      
+                            	<option><%= c.title %></option>
+                                    <div class="col-4">
+                                    <div class="index-img">
+
+                                    </div>                          
+                                    </div>
+                                <% end %>
+
                             </select>
                         </div>
                         <div class="clr"></div> 

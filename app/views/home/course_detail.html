@@ -57,7 +57,7 @@
                         <li><a>Our courses</a>
                             <ul class="sub-menu">
                            <% @courses.each do |c| %>
-                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></li>
+                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } %></li>
                            <% end %> 
                           </ul>
                         </li>      
@@ -109,8 +109,8 @@
                                 <div class="course-img">
                                 	<%= image_tag c.pic.url(:medium) %>
                                     <span class="caption"><p value="<%= c.title %>"></span>
-                                      <li style="float: left;"><%= c.title %> </li>                               
-                                <%= link_to 'Read More', {:action => 'course_detail', :title => c.title }, :class => 'read-btn' -%>
+                                      <li style="float: left;"><%= c.title %> </li>                            
+                                <%= link_to 'Read More', {:action => 'course_detail', :title => c.title }, :class => 'read-btn' %>
                               </div>                          
                             </div>
                   <% end %>

@@ -1,0 +1,8 @@
+<%= semantic_form_for [:admin, @placement] do |f| %>
+	<label>Title</label><br />
+    <%=f.text_field :title %><br /> 
+	<label>Status</label>
+    <%=f.check_box :status, :checked => true %><br />
+    <%= f.file_field :pic %>
+    <%= f.actions  %>
+<% end %>

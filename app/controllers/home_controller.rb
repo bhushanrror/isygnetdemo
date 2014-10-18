@@ -4,7 +4,9 @@ class HomeController < ApplicationController
 		@courses = Course.find(:all)
 		@recruiters = RecruitmentPartner.all
 		@testimonials = Testimonial.all
+		@placements = Placement.all 
 		@settings = Setting.all
+
 	end
 	def about
 		@courses = Course.find(:all)
@@ -15,11 +17,12 @@ class HomeController < ApplicationController
 	end	
 	def contact
 		@user = User.new
-		@courses = Course.find(:all)
+		@courses = Course.all
 	end
 	def placement
-		@courses = Course.find(:all)
-		@testimonial = Testimonial.all
+		@courses = Course.all
+		@testimonials = Testimonial.all
+		@placements = Placement.all
 	end
 	def sendmail		
 		puts @user
