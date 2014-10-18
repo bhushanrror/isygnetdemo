@@ -35,13 +35,37 @@
             <div class="col-8">
               <div class="fr clr social">
                   <span>Stay Connected:</span>
-                  <ul class="social-icon fr">
-            <li><a href="#" class="facebook">&nbsp;</a></li>
-                        <li><a href="#" class="g-plus">&nbsp;</a></li>
-            <li><a href="#" class="tweet">&nbsp;</a></li>
-                        <li><a href="#" class="rss">&nbsp;</a></li>
-            <li><a href="#" class="vimeo">&nbsp;</a></li>
-                        <li><a href="#" class="linkedin">&nbsp;</a></li>            
+                 <ul class="social-icon fr">
+                        <% @settings.each do |setting| %>
+                            <% if (setting.settingkey == 'facebook' ) then %>          
+                                <% if (setting.settingvalue) then %>
+                        <li><a href="<%= setting.settingvalue %>" class="facebook">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="facebook">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'google' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="g-plus">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="g-plus">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'twitter' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="tweet">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="tweet">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'linked_in' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="linkedin">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="linkedin">&nbsp;</a></li>
+                                <% end %>                        
+                            <% end %>                       
+                        <% end %>
           </ul>
                 </div>
                 <div class="fr phone-number clr">

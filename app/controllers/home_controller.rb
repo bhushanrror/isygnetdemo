@@ -10,19 +10,23 @@ class HomeController < ApplicationController
 	end
 	def about
 		@courses = Course.find(:all)
+		@settings = Setting.all
 	end
 	def course_detail
 		@courses = Course.find(:all)
 		@course = Course.friendly.find(params[:title])
+		@settings = Setting.all
 	end	
 	def contact
 		@user = User.new
 		@courses = Course.all
+		@settings = Setting.all
 	end
 	def placement
 		@courses = Course.all
 		@testimonials = Testimonial.all
 		@placements = Placement.all
+		@settings = Setting.all
 	end
 	def sendmail		
 		puts @user
