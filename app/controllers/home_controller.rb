@@ -5,8 +5,9 @@ class HomeController < ApplicationController
 		@recruiters = RecruitmentPartner.all
 		@testimonials = Testimonial.all
 		@placements = Placement.all 
-	end
+		@settings = Setting.all
 
+	end
 	def about
 		@courses = Course.find(:all)
 	end

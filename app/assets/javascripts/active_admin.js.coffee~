@@ -1,0 +1,7 @@
+//= require jquery
+//= require jquery.html5_editor
+#= require active_admin/base
+$(function() {  
+  $(".html5-editor").html5_editor();
+});
+

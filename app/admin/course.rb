@@ -1,6 +1,13 @@
 ActiveAdmin.register Course do
   permit_params :title, :description, :duration, :fees, :pic, :status, :batch
-   
+  
+    before_filter do
+    Course.class_eval do
+      def to_param
+        id.to_s
+      end
+    end
+  end
   
     form :partial => "form"
 
