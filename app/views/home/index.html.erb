@@ -85,8 +85,7 @@
                     $('.msg').append('Please select value!');
                     e.preventDefault;
                 }
-				
-			});	
+			});
 			});
     </script>
 </head>
@@ -123,7 +122,7 @@
                         <li><a>Our courses</a>
                             <ul class="sub-menu">
                            <% @courses.each do |c| %>
-                           <li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
+                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></li>
                            <% end %> 
                           </ul>
                         </li>                        
@@ -153,7 +152,7 @@
                     <div class="col-5">
                         <div class="shadow box padding">
                             <a id="various3" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
-                                <%= image_tag testimonial.pic.url(:land) %>
+                                <%= image_tag testimonial.pic.url(:medium) %>
                             </a>
                         </div>  
                     </div>  
@@ -164,6 +163,7 @@
                 <% else %>  
                         <div class="col-4">
                                 <a href="#" class="thumbs shadow">
+                                 <%= image_tag testimonial.pic.url(:medium) %>
                                 </a>
                         </div>
                 <% end %>
@@ -206,10 +206,9 @@
                             <select class="input-control">
                             	<option value="">Select Options</option>
                                 <% @courses.each do |c| %>
-                                    <option value="<%= c.id %>"><li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
-                                    </option> 
+                                    
                                 <% end %>  
-                                <!--<% @courses.each do |c| %>
+                                <% @courses.each do |c| %>
                                     <div class="col-4">
                                     <div class="index-img">
                                         <%= image_tag c.pic.url(:medium) %>
@@ -222,7 +221,7 @@
                             <span class="msg"></span><br />
                             <button type="submit" class="btn-normal">GO TO THE COURSE</button>
                         </div>
-            </section><!-- courses end -->
+            </section>
             <section class="partner-slider shadow">
                     <h2>Our Recruitment Partner</h2>
                     <div class="slider-img fixed-bar">         

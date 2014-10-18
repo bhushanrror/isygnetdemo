@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 	end
 	def course_detail
 		@courses = Course.find(:all)
-		@course = Course.find(params[:id])
+		@course = Course.friendly.find(params[:title])
 	end	
 	def contact
 		@user = User.new

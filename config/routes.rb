@@ -6,7 +6,7 @@ Isygnetdemo::Application.routes.draw do
   root 'home#index'
   resources :home
   get '/about/', to: 'home#about', as: 'about'
-  get '/course_detail/', to: 'home#course_detail', as: 'course_detail'
+  get '/course/:title', to: 'home#course_detail', as: 'course_detail'
   get '/contact/', to: 'home#contact', as: 'contact'
   get '/placement/', to: 'home#placement', as: 'placement'  
   post '/sendmail', to: 'home#sendmail', as: 'sendmail'

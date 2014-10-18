@@ -57,10 +57,10 @@
                         <li><a>Our courses</a>
                             <ul class="sub-menu">
                            <% @courses.each do |c| %>
-                           <li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
+                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></li>
                            <% end %> 
                           </ul>
-                          </li>
+                        </li>      
                         <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </nav>
