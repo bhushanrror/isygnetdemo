@@ -111,8 +111,8 @@
                                     <%= image_tag c.pic.url (:medium) %>
                                     <span class="caption"><p value="<%= c.title %>">
                                    		<li style="float: left;"><%= c.title %></li>
+                                   		<a href="course_detail?id=<%= c.id %>" class="read-btn">Read More</a>
                                    	</span>        	                    	
-        	                    	<a href="course_detail?id=<%= c.id %>" class="read-btn">Read More</a>
         	                    </div>  	                	    
                         		</div>
                         		<% end %>

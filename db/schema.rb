@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017101239) do
+ActiveRecord::Schema.define(version: 20141017135852) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -71,6 +71,18 @@ ActiveRecord::Schema.define(version: 20141017101239) do
   end
 
   add_index "courses", ["batch_id"], name: "index_courses_on_batch_id"
+
+  create_table "placements", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "status"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "recruitment_partners", force: true do |t|
     t.string   "title"
