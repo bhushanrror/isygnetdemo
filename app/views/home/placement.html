@@ -57,10 +57,10 @@
                         <li><a>Our courses</a>
                             <ul class="sub-menu">
                            <% @courses.each do |c| %>
-                           <li><%= link_to c.title, {:action => 'course_detail', :id => c.id } -%></li>
+                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } %></li>
                            <% end %> 
                           </ul>
-                        </li>                        
+                        </li>                         
                         <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </nav>
@@ -84,68 +84,19 @@
               </div>
               <div class="col">
                     <div class="col-12 ">
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>   
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
+                                         
+                            <% @placements.each do |p| %>
+                                <div class="col-3">
+                                    <div class="course-img" style="width:150px;height:200px">
+                                      <%= image_tag p.pic.url(:medium) %>
+                                      <li style="float: left;"><%= p.title %> </li>                            
+                                    </div>                          
+                                </div>
+                            <% end %>  
+                                           
                     </div>
-               </div> 
-               <div class="col">
-                    <div class="col-12 ">
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>   
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="col-12 ">
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>   
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                    </div>
-               </div>
-               <div class="col">
-                    <div class="col-12 ">
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>   
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                          <div class="col-3">
-                              <a href="#" class="place-box"><img src="/assets/ebay.png"></a>  
-                          </div>  
-                    </div>
-               </div>
+              </div>         
+                        
             </section>                       
             <footer>
                      <p>Copyright 2014 All Rights Reserved by <a href="/home">iSygnet</a><p>
