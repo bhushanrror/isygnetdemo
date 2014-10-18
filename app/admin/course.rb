@@ -20,3 +20,4 @@ ActiveAdmin.register Course do
       end 
     f.actions
   end 
+end

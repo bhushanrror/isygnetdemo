@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018073310) do
+ActiveRecord::Schema.define(version: 20141017135852) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,36 +46,12 @@ ActiveRecord::Schema.define(version: 20141018073310) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
-  create_table "assets", force: true do |t|
-    t.string   "storage_uid"
-    t.string   "storage_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "storage_width"
-    t.integer  "storage_height"
-    t.float    "storage_aspect_ratio"
-    t.integer  "storage_depth"
-    t.string   "storage_format"
-    t.string   "storage_mime_type"
-    t.string   "storage_size"
-  end
-
-  create_table "batches", force: true do |t|
-    t.datetime "start_time"
-    t.integer  "student"
-    t.integer  "duration"
-    t.boolean  "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "courses", force: true do |t|
     t.text     "title"
     t.text     "description"
     t.text     "duration"
     t.decimal  "fees",             precision: 8, scale: 2
     t.boolean  "status"
-    t.integer  "batch_id"
     t.string   "pic_file_name"
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
@@ -83,8 +59,6 @@ ActiveRecord::Schema.define(version: 20141018073310) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "courses", ["batch_id"], name: "index_courses_on_batch_id"
 
   create_table "placements", force: true do |t|
     t.string   "title"
@@ -111,10 +85,10 @@ ActiveRecord::Schema.define(version: 20141018073310) do
   end
 
   create_table "settings", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "settingkey"
     t.string   "settingvalue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "testimonials", force: true do |t|

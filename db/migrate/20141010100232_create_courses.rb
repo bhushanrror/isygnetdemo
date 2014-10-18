@@ -6,7 +6,6 @@ class CreateCourses < ActiveRecord::Migration
 		t.text :duration
 		t.decimal :fees, precision: 8, scale: 2		
 		t.boolean :status
-		t.references :batch, index: true
 		t.string :pic_file_name
 		t.string :pic_content_type
  		t.integer :pic_file_size
