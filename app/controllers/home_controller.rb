@@ -4,8 +4,8 @@ class HomeController < ApplicationController
 		@courses = Course.find(:all)
 		@recruiters = RecruitmentPartner.all
 		@testimonials = Testimonial.all
+		@settings = Setting.all
 	end
-
 	def about
 		@courses = Course.find(:all)
 	end

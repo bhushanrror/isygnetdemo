@@ -101,12 +101,36 @@
             	<div class="fr clr social">
                 	<span>Stay Connected:</span>
                 	<ul class="social-icon fr">
-						<li><a href="#" class="facebook">&nbsp;</a></li>
-                        <li><a href="#" class="g-plus">&nbsp;</a></li>
-						<li><a href="#" class="tweet">&nbsp;</a></li>
-                        <li><a href="#" class="rss">&nbsp;</a></li>
-						<li><a href="#" class="vimeo">&nbsp;</a></li>
-                        <li><a href="#" class="linkedin">&nbsp;</a></li>						
+                        <% @settings.each do |setting| %>
+                            <% if (setting.settingkey == 'facebook' ) then %>          
+                                <% if (setting.settingvalue) then %>
+            						<li><a href="<%= setting.settingvalue %>" class="facebook">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="facebook">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'google' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="g-plus">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="g-plus">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'twitter' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="tweet">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="tweet">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'linked_in' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="linkedin">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="linkedin">&nbsp;</a></li>
+                                <% end %>                        
+                            <% end %>                       
+                        <% end %>
 					</ul>
                 </div>
                 <div class="fr phone-number clr">
@@ -121,10 +145,10 @@
                         <li><a href="/about">About Us</a></li>
                         <li><a>Our courses</a>
                             <ul class="sub-menu">
-                           <% @courses.each do |c| %>
-                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></li>
-                           <% end %> 
-                          </ul>
+                                <% @courses.each do |c| %>
+                                    <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></li>
+                                <% end %>
+                            </ul>
                         </li>                        
                         <li><a href="/contact">Contact Us</a></li>
                     </ul>
@@ -191,9 +215,7 @@
                         <button type="submit" class="btn-normal" onclick="window.location.href='/contact'" >Contact Us</button>
                     </div>
             </section><!-- maping end -->
-            <section class="courses shadow">
-
-                   
+            <section class="courses shadow">                   
                     <div class="col-7">
                         <div class="phone-img">
                             <img src="/assets/img4.jpg">
@@ -204,17 +226,10 @@
                         <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
                         <div class="input-group">
                             <select class="input-control">
-                            	<option value="">Select Options</option>
+                                <option value="">Select Options</option>    
                                 <% @courses.each do |c| %>
-                                    
-                                <% end %>  
-                                <% @courses.each do |c| %>
-                                    <div class="col-4">
-                                    <div class="index-img">
-                                        <%= image_tag c.pic.url(:medium) %>
-                                    </div>                          
-                                    </div>
-                                <% end %>
+                                    <option><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></option>
+                                <% end %>      
                             </select>
                         </div>
                         <div class="clr"></div> 

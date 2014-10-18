@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 1.2'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'friendly_id'
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
