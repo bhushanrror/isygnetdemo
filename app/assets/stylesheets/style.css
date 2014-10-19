@@ -26,7 +26,7 @@ h1.logo {margin-top: 19px;}.logo img{width: auto;}
 .social span {color: #393939;float: left;font-size: 16px;margin: 6px;}
 .social-icon{overflow:visible; margin-bottom: 30px;}
 .social-icon li {margin-right: 5px; float: left;}
-.social-icon li a {background-image: url("<%= asset_path('icon.png') %>");border-radius: 90px;height: 28px;width: 27px;opacity: 0.8; display: block; background-repeat: no-repeat;background-position: 0 0; transition:all 0.25s linear 0s;}
+.social-icon li a {background-image: url("/assets/icon.png");border-radius: 90px;height: 28px;width: 27px;opacity: 0.8; display: block; background-repeat: no-repeat;background-position: 0 0; transition:all 0.25s linear 0s;}
 .social-icon li a:hover {opacity:1;}
 .social-icon li a.g-plus {background-position: -36px 0;}
 .social-icon li a.tweet {background-position: -70px 0;}
@@ -36,10 +36,10 @@ h1.logo {margin-top: 19px;}.logo img{width: auto;}
 .phone-number {margin-bottom: 10px;}
 .phone-text {font-size: 24px;font-family: "DroidSerifRegular";}
 .number {font-size:24px;}
-.phone-num-img {background-image: url("<%= asset_path('phone.png') %>");background-repeat: no-repeat;display: block;float: left;height: 30px;margin-right: 10px;width: 30px;}
+.phone-num-img {background-image: url("/assets/phone.png");background-repeat: no-repeat;display: block;float: left;height: 30px;margin-right: 10px;width: 30px;}
 nav ul.menu-pills{background-color: #3E3E3E; padding: 0px; border-radius: 3px; /*overflow: visible;*/margin-bottom: 10px;}
 nav ul li{float: left;position: relative;}
-nav ul.menu-pills li a{padding:10px 20px; color:#f9f9f9; display: block; font-size: 16px; border-right: 1px solid #565656;transition:all 0.25s linear 0s;text-decoration: none;}
+nav ul.menu-pills li a{padding:10px 20px; color:#f9f9f9; display: block; font-size: 16px; border-right: 1px solid #565656;transition:all 0.25s linear 0s}
 nav ul.menu-pills li a:hover{ background-color:#1A1A1A; border-radius: 0px;}
 nav ul.menu-pills li a.active{background-color:#1A1A1A;}
 .navbar-hidden{display: none;}
@@ -78,8 +78,8 @@ textarea.input-control {height: auto;}
 /* maping css */
 .maping{overflow: hidden; padding: 15px 10px; margin: 30px 0; background-color: #fff }
 .maping .col-7 {margin-left: 50px;width: 51.333% !important;}
-.btn-normal{background-image:url("<%= asset_path('btn_bg.png') %>"); background-repeat: repeat; background-position: 0 0; border:0px !important; font-size: 16px !important; color:#F9F9F9 !important; padding: 10px 20px; text-transform: uppercase; margin-top: 30px;text-shadow: 1px 1px 0 #444; border-radius: 3px; cursor: pointer;font-family: "arial";}
-.btn-normal:hover{background-image:url("<%= asset_path('btn_bg_hover.png') %>") !important; background-repeat: repeat; background-position: 0 0; opacity: 1 !important}
+.btn-normal{background-image:url(/assets/btn_bg.png); background-repeat: repeat; background-position: 0 0; border:0px !important; font-size: 16px !important; color:#F9F9F9 !important; padding: 10px 20px; text-transform: uppercase; margin-top: 30px;text-shadow: 1px 1px 0 #444; border-radius: 3px; cursor: pointer;font-family: "arial";}
+.btn-normal:hover{background-image:url(/assets/btn_bg_hover.png) !important; background-repeat: repeat; background-position: 0 0; opacity: 1 !important}
 /* courses css */
 .courses{overflow: hidden; background-color: #fff;padding: 40px 10px 20px 10px; margin: 30px 0;}
 .courses h2{color: #e56d00}
@@ -94,7 +94,7 @@ textarea.input-control {height: auto;}
 .train-img{width: 227px; height: 231px;}
 .traning h3{color: #272727; font-size: 20px;  clear: both;}
 .traning .col-7 {margin-left: 80px;width: 57.333%;}
-.para{background-image:url("<%= asset_path('quote.png') %>"); background-repeat: no-repeat; background-position: 0 0; padding: 5px 0 0 70px;font-size: 14px; line-height: 20px; color: #494949; margin-top: 30px;}
+.para{background-image:url(/assets/quote.png); background-repeat: no-repeat; background-position: 0 0; padding: 5px 0 0 70px;font-size: 14px; line-height: 20px; color: #494949; margin-top: 30px;}
 .traning .col-7 > p {color: #272727;font-size: 14px;font-weight: bold;padding: 10px 0 0 70px;}
 .col-7 p span {color: #494949;font-style: italic;font-size: 13px; font-weight: normal;}
 .sidebar .menu-stacked {margin: 10px 0 0 30px;}
@@ -113,14 +113,14 @@ textarea.input-control {height: auto;}
 .cours-she h2 {float: none;line-height: 22px;margin-bottom: 10px;}
 .border-bottom{border-bottom: 1px dotted #ccc;margin-bottom: 20px;}
 .course-img {height: 180px;position: relative; overflow: hidden;}
-.caption {bottom: 0;font-size: 18px;padding: 10px;position: absolute;width: 100%;z-index: 999999;background-image: url("<%= asset_path('bg-1.png') %>"); background-position: 0 0; background-repeat: repeat;color: #F9F9F9; text-align: center;}
+.caption {bottom: 0;font-size: 18px;padding: 10px;position: absolute;width: 100%;z-index: 999999;background-image: url(/assets/bg-1.png); background-position: 0 0; background-repeat: repeat;color: #F9F9F9; text-align: center;}
 .about span.caption p {float: left;color: #F9F9F9;}
 .read-btn {float: right;font-size: 14px;margin-top: 3px;text-align: right;}
 .read-btn:hover {text-decoration: underline;}.text-centre{text-align: center;}.text-centre .btn-normal{margin: 20px 0}
 .italic{font-style: italic;}.about-slider .caption {bottom: 5px;width: 97%;}
 .about .col-4 {margin-bottom: 20px;}
 /***placement page ***/
-.place-box {float: left;width: 100%;border: 1px solid #eeeeee;transition: all 0.2s ease-out 0s; background-image: url("<%= asset_path('background.jpg') %>"); background-position: 0 0; background-repeat:repeat;}
+.place-box {float: left;width: 100%;border: 1px solid #eeeeee;transition: all 0.2s ease-out 0s; background-image: url(/assets/background.jpg); background-position: 0 0; background-repeat:repeat;}
 .marg-top{margin-top: 20px;}.placement {padding-bottom: 20px;}.place-box .caption {bottom: 6px;width: 81.5%;}
 .place-box:hover { border: 1px solid #999999;box-shadow: 0 0 30px #999999 inset;}.place-box > img {margin: 0 auto;width: auto;}
 .placement .col-12{margin-bottom: 0px;}.placement .col-3{margin: 4px; padding: 0px; width: 24%}
@@ -130,8 +130,8 @@ textarea.input-control {height: auto;}
 .contact .col-6 span {color: #555; font-size: 16px; font-weight: bold;}
 .contact .col-6 address a {display: block;}
 .contact button {margin-top:0px;}
-.contact address p.phone a {background-image: url("<%= asset_path('icon.png') %>");background-position: 0 -39px; background-repeat: no-repeat; padding-left: 32px;}
-.contact address p.email a {background-image: url("<%= asset_path('icon.png') %>");background-position: 0 -59px; background-repeat: no-repeat; padding-left: 32px;}
+.contact address p.phone a {background-image: url("/assets/icon.png");background-position: 0 -39px; background-repeat: no-repeat; padding-left: 32px;}
+.contact address p.email a {background-image: url("/assets/icon.png");background-position: 0 -59px; background-repeat: no-repeat; padding-left: 32px;}
 .contact .input_field {margin-bottom: 10px;}
 .contact span.getintouch {display: inline-block;font-family: "DroidSerifRegular";font-size: 20px;margin-bottom: 10px;}
 /* footer css */
