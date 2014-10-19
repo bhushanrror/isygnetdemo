@@ -26,7 +26,7 @@ module Isygnetdemo
                                   "fontawesome-webfont.ttf",
                                  "fontawesome-webfont.eot",
                                  "fontawesome-webfont.svg",
-                                 "fontawesome-webfont.woff")
+                                 "fontawesome-webfont.woff","style.css.scss","style.css")
 
 
 
