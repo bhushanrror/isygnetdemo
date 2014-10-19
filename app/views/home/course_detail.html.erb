@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Skill Drill</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="css/grid.css" rel="stylesheet" type="text/css">
+        <script type='text/javascript' src='js/jquery.js'></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script>
+           $(function() {
+               var pull = $('.menu-btn');
+               menu = $('nav .menu');
+               menuHeight = menu.height();
+               $(pull).on('click', function(e) {
+               e.preventDefault();
+               menu.slideToggle();
+               });
+               $(window).resize(function(){
+               var w = $(window).width();
+               if(w > 320 && menu.is(':hidden')) {
+               menu.removeAttr('style');
+               }
+               });
+               });
+        </script>
+</head>
+<body>
+<header>
+  <div class="wrapper">
+      <div class="col">
+          <div class="col-4">
+              <h1 class="logo"><a href= "/home" ><img src="<%= asset_path('isygnet-logo-final.png') %>"></a></h1>
+            </div>
+            <div class="col-8">
+              <div class="fr clr social">
+                  <span>Stay Connected:</span>
+
+                <ul class="social-icon fr">
+
+                        <% @settings.each do |setting| %>
+                            <% if (setting.settingkey == 'facebook' ) then %>          
+                                <% if (setting.settingvalue) then %>
+                        <li><a href="<%= setting.settingvalue %>" class="facebook">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="facebook">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'google' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="g-plus">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="g-plus">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'twitter' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="tweet">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="tweet">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'linked_in' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="linkedin">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="linkedin">&nbsp;</a></li>
+                                <% end %>                        
+                            <% end %>                       
+                        <% end %>
+          </ul>
+                </div>
+                <div class="fr phone-number clr">
+                  <span class="phone-num-img">&nbsp;</span>
+                  <span class="phone-text">Contact us: </span>
+                    <span class="number">(<small>020</small>) 6419808</span>
+                </div>
+                <nav class="clr fr">
+                    <a class="menu-btn" href="javascript:void(0);">Menu</a>
+                    <ul class="fr menu-pills menu">
+                        <li><a href="/home" class="active">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a>Our courses</a>
+                            <ul class="sub-menu">
+                           <% @courses.each do |c| %>
+                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } %></li>
+                           <% end %> 
+                          </ul>
+                        </li>      
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><!-- wrapper end -->
+    
+</header>
+<!-- header end -->
+<div class="wrapper clr">            
+            <section class="about shadow">
+            <div class="col title">                
+                <ul class="breadcrumb">
+                   <li><a href="/home">Home</a> / <span class="current">Cources</span></li>
+                </ul> 
+                
+            </div>
+            <div class="col">
+              <div class="mid-head col-12 italic">                    
+                  We are Stark Digital Media Services Pvt. Ltd a leading WEB Services Company providing end to end design and developmentservices to its clients across the globe
+              </div>
+             </div>
+            <div class="col cours-she">
+                 <div class="col-12 border-bottom">
+                    <div class="col-4">
+                    <img src="<%= @course.pic%>" width="100%">                      
+                    </div>
+                    <div class="col-8">    
+                              <h2>Course Name: <%= @course.title%></h2> 
+                              <p>Description: <%= @course.description%></p>
+                              <p>Duration: <%= @course.duration%></p>
+                              <p>Fees: <%= @course.fees%></p>  
+
+                       <button type="submit" class="btn-normal course-shed-btn">Schedule of Cources</button>                 
+   						      </div>
+                </div>    
+            </div>
+            <div class="col">
+              <div class="col-12 mid-head">
+                You can also check Cources
+              </div>
+              <div class="col-12">
+
+                  <% @courses.each do |c| %>
+                              <div class="col-4">
+                                <div class="course-img">
+                                	<%= image_tag c.pic.url(:medium) %>
+                                    <span class="caption"><p value="<%= c.title %>"></span>
+                                      <li style="float: left;"><%= c.title %> </li>                            
+                                <%= link_to 'Read More', {:action => 'course_detail', :title => c.title }, :class => 'read-btn' %>
+                              </div>                          
+                            </div>
+                  <% end %>
+
+              </div>
+            </div>             
+            </section>                       
+            <footer>
+                     <p>Copyright 2014 All Rights Reserved by <a href="/home">iSygnet</a><p>
+            </footer><!-- footer end -->    
+</div><!-- wrapper end -->   
+</body>
+</html>

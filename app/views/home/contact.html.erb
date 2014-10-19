@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+        <meta charset="utf-8">        
+        <meta name="viewport" content="width=device-width">
+        <title>isygnet</title>
+        <link href="css/grid.css" rel="stylesheet" type="text/css">
+        <script type='text/javascript' src='js/jquery.js'></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script>
+           $(function() {
+               var pull = $('.menu-btn');
+               menu = $('nav .menu');
+               menuHeight = menu.height();
+               $(pull).on('click', function(e) {
+               e.preventDefault();
+               menu.slideToggle();
+               });
+               $(window).resize(function(){
+               var w = $(window).width();
+               if(w > 320 && menu.is(':hidden')) {
+               menu.removeAttr('style');
+               }
+               });
+               });
+        </script>
+  </head>
+<body>
+<header>
+  <div class="wrapper">
+      <div class="col">
+          <div class="col-4">
+              <h1 class="logo"><a href= "/home" ><img src="<%= asset_path('isygnet-logo-final.png') %>"></a></h1>
+            </div>
+            <div class="col-8">
+              <div class="fr clr social">
+                  <span>Stay Connected:</span>
+
+             <ul class="social-icon fr">
+
+                        <% @settings.each do |setting| %>
+                            <% if (setting.settingkey == 'facebook' ) then %>          
+                                <% if (setting.settingvalue) then %>
+                        <li><a href="<%= setting.settingvalue %>" class="facebook">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="facebook">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'google' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="g-plus">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="g-plus">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'twitter' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="tweet">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="tweet">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'linked_in' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="linkedin">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="linkedin">&nbsp;</a></li>
+                                <% end %>                        
+                            <% end %>                       
+                        <% end %>
+          </ul>
+                </div>
+                <div class="fr phone-number clr">
+                  <span class="phone-num-img">&nbsp;</span>
+                  <span class="phone-text">Contact us: </span>
+                    <span class="number">(<small>020</small>) 6419808</span>
+                </div>
+                <nav class="clr fr">
+                    <a class="menu-btn" href="javascript:void(0);">Menu</a>
+                    <ul class="fr menu-pills menu">
+                        <li><a href="/home" class="active">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                       <li><a>Our courses</a>
+                            <ul class="sub-menu">
+                           <% @courses.each do |c| %>
+                           <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } -%></li>
+                           <% end %> 
+                          </ul>
+                        </li>                         
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><!-- wrapper end -->
+</header>
+<!-- header end -->
+<div class="wrapper clr">            
+  <section class="about shadow">
+    <div class="col title">  
+      <div class="col-12">              
+        <div class="fl">
+          <h2>Contact</h2>
+        </div>                 
+        <div class="fr">
+          <ul class="breadcrumb">
+            <li><a href="/home">Home</a> / <span class="current">Contact</span></li>
+          </ul> 
+        </div>
+      </div>  
+    </div>
+    <div class="mid-head italic col-12">                    
+      <div class="container" id="map">
+        <iframe width="870" height="300" src="https://maps.google.co.in/maps?oe=utf-8&amp;client=firefox-a&amp;channel=fflb&amp;ie=UTF8&amp;q=Stark+Infotech&amp;fb=1&amp;gl=in&amp;hq=stark+infotech&amp;cid=14021777311442124501&amp;t=m&amp;ll=18.511069,73.795981&amp;spn=0.010174,0.021865&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+      </div>
+    </div>
+    <div class="col-12 contact">
+      <div class="col-6">
+        <span class="getintouch">Get in touch</span>
+        <%= form_for :user, :url => sendmail_path, :html => { :method => :post } do |f| %>
+          <div class="input_field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Name" required>
+          </div>
+          
+          <div class="input_field">
+            <label>Your email</label>
+            <input type="email" name="email" placeholder="Name" required>
+          </div>
+
+          <div class="input_field">
+            <label>Phone no.</label>
+            <input type="text"  name="phone" placeholder="Phone no." required>
+          </div>
+
+          <div class="input_field">
+            <label>Message</label>
+            <textarea name="message" placeholder="Your Message"></textarea>
+          </div>
+          <p class="text-left">
+            <button type="submit" class="btn-normal">Send</button>
+          </p>
+        <% end %>
+      </div>  
+      <div class="col-6">
+        <address>
+          <span class="getintouch">iSygnet</span>
+          <p>R/t- 5, A Type Building, Dhanalaxmi Park,</p>
+          <p>Opposite to Kothrud Bus Depot, Paud Road,</p>
+          <p>Kothrud Pune -411038,</p>
+          <p>Maharashtra, India.</p>
+          <p class="phone"><a href="#">(020) 6419 8008</a></p>
+          <p class="email"><a href="mailto:sales@starkdigital.net">sales@starkdigital.net</a></p>
+        </address>
+      </div> 
+    </div>   
+    <div class="clr"></div>
+  </section>                       
+  <footer>
+    <p>Copyright 2014 All Rights Reserved by <a href="/home">iSygnet</a><p>
+  </footer><!-- footer end -->    
+</div><!-- wrapper end -->   
+</body>
+</html>
