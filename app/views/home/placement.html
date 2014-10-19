@@ -30,12 +30,14 @@
   <div class="wrapper">
       <div class="col">
           <div class="col-4">
-              <h1 class="logo"><a href= "/home" ><img src="/assets/isygnet-logo-final.png"></a></h1>
+              <h1 class="logo"><a href= "/home" ><img src="<%= asset_path('isygnet-logo-final.png') %>"></a></h1>
             </div>
             <div class="col-8">
               <div class="fr clr social">
                   <span>Stay Connected:</span>
+
                  <ul class="social-icon fr">
+
                         <% @settings.each do |setting| %>
                             <% if (setting.settingkey == 'facebook' ) then %>          
                                 <% if (setting.settingvalue) then %>
