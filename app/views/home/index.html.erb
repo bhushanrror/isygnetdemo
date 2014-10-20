@@ -6,22 +6,22 @@
         <meta name="viewport" content="width=device-width">
 
         <script>
-           $(function() {
+           jQuery(function() {
            	alert("this is alert");
-               var pull = $('.menu-btn');
-               menu = $('nav .menu');
+               var pull = jQuery('.menu-btn');
+               menu = jQuery('nav .menu');
                menuHeight = menu.height();
-               $(pull).on('click', function(e) {
+               jQuery(pull).on('click', function(e) {
                e.preventDefault();
                menu.slideToggle();
                });
-               $(window).resize(function(){
-               var w = $(window).width();
+               jQuery(window).resize(function(){
+               var w = jQuery(window).width();
                if(w > 320 && menu.is(':hidden')) {
                menu.removeAttr('style');
                }
                });
-               $("#slider1").responsiveSlides({
+               jQuery("#slider1").responsiveSlides({
                speed: 800
                });
                });
