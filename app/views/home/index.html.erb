@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width">
 
         <script>
-           jQuery(function() {
-           	alert("this is alert");
+        	jQuery.noConflict();
+           	jQuery(function() {           
                var pull = jQuery('.menu-btn');
                menu = jQuery('nav .menu');
                menuHeight = menu.height();
@@ -24,7 +24,7 @@
                jQuery("#slider1").responsiveSlides({
                speed: 800
                });
-               });
+            });
         </script>
        
     <script type="text/javascript">
