@@ -22,7 +22,7 @@ module Isygnetdemo
     config.serve_static_assets = true
    # config.action_dispatch.x_sendfile_header = nil
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,'*.js', '*.css', '*.css.erb',
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif,'*.js', '*.css', '*.css.erb','*.css.scss',
                                   "fontawesome-webfont.ttf",
                                  "fontawesome-webfont.eot",
                                  "fontawesome-webfont.svg",
