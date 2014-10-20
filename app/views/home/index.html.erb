@@ -35,21 +35,21 @@
     </script>
 		<script type="text/javascript">
 			
-            $(document).ready(function(){
-            $('.msg').val('');
-    			$('.btn-normal').on("click", function(e){
+            jQuery(document).ready(function(){
+           jQuery('.msg').val('');
+    			jQuery('.btn-normal').on("click", function(e){
     				
-                    var course = $('.input-control').val();
+                    var course = jQuery('.input-control').val();
     				if(course){
     					var url = "/course/"+course;    
-    					$(location).attr('href',url);
+    					jQuery(location).attr('href',url);
     				}else{
-                        $('.msg').append('Please select value!');
+                        jQuery('.msg').append('Please select value!');
                         e.preventDefault;
                     }
     			}); 
 
-                $('.input-control').on("change", function(e){
+                jQuery('.input-control').on("change", function(e){
                     alert(0); return false;
                     
                 }); 
