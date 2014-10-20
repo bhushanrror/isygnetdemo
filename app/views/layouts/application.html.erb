@@ -5,8 +5,124 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+        <script>
+        	jQuery.noConflict();
+           	jQuery(function() {           
+               var pull = jQuery('.menu-btn');
+               menu = jQuery('nav .menu');
+               menuHeight = menu.height();
+               jQuery(pull).on('click', function(e) {
+               e.preventDefault();
+               menu.slideToggle();
+               });
+               jQuery(window).resize(function(){
+               var w = jQuery(window).width();
+               if(w > 320 && menu.is(':hidden')) {
+               menu.removeAttr('style');
+               }
+               });
+               jQuery("#slider1").responsiveSlides({
+               speed: 800
+               });
+            });
+        </script>       
+    <script type="text/javascript">  
+    </script>
+		<script type="text/javascript">
+			
+            jQuery(document).ready(function(){
+           jQuery('.msg').val('');
+    			jQuery('.btn-normal').on("click", function(e){
+    				
+                    var course = jQuery('.input-control').val();
+    				if(course){
+    					var url = "/course/"+course;    
+    					jQuery(location).attr('href',url);
+    				}else{
+                        jQuery('.msg').append('Please select value!');
+                        e.preventDefault;
+                    }
+    			}); 
+
+                jQuery('.input-control').on("change", function(e){
+                    alert(0); return false;
+                    
+                }); 
+
+			});
+    </script>
 </head>
 <body>
+<header>
+	<div class="wrapper">
+    	<div class="col">
+        	<div class="col-4">
+            	<h1 class="logo"><a href= "/home" ><img src="<%= asset_path('isygnet-logo-final.png') %>"></a></h1>
+            </div>
+            <div class="col-8">
+            	<div class="fr clr social">
+                	<span>Stay Connected:</span>
+                	<ul class="social-icon fr">
+                        <% @settings.each do |setting| %>
+                            <% if (setting.settingkey == 'facebook' ) then %>          
+                                <% if (setting.settingvalue) then %>
+            						<li><a href="<%= setting.settingvalue %>" class="facebook">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="facebook">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'google' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="g-plus">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="g-plus">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'twitter' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="tweet">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="tweet">&nbsp;</a></li>
+                                <% end %>
+                            <% end %>
+                            <% if (setting.settingkey == 'linked_in' ) then %>
+                                <% if (setting.settingvalue) then %>
+                                    <li><a href="<%= setting.settingvalue %>" class="linkedin">&nbsp;</a></li>
+                                <% else %>
+                                    <li><a href="#" class="linkedin">&nbsp;</a></li>
+                                <% end %>                        
+                            <% end %>                       
+                        <% end %>
+					</ul>
+                </div>
+                <div class="fr phone-number clr">
+                	<span class="phone-num-img">&nbsp;</span>
+                	<span class="phone-text">Contact us: </span>
+                    <span class="number">(<small>020</small>) 6419808</span>
+                </div>
+                <nav class="clr fr">
+                    <a class="menu-btn" href="javascript:void(0);">Menu</a>
+                    <ul class="fr menu-pills menu">
+                        <li><a href="/home" class="active">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a>Our courses</a>
+                            <ul class="sub-menu">
+
+                           <% @courses.each do |c| %>
+                              <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } %></li>
+                           <% end %> 
+                          </ul>
+
+                        </li>                        
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><!-- wrapper end -->
+</header>
 
 <%= yield %>
 

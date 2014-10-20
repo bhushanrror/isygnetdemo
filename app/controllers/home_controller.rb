@@ -28,8 +28,19 @@ class HomeController < ApplicationController
 		@placements = Placement.all
 		@settings = Setting.all
 	end
-	def sendmail		
-		puts @user
-		#UserMailer.welcome_email(@user).deliver
+	def sendmail	
+	@user = User.new
+	@user.name = params[:name]
+    @user.email = params[:email]
+    @user.phone = params[:phone]
+    @user.message = params[:message]
+    puts @user
+    UserMailer.welcome_email(@user).deliver
+    redirect_to contact_path, notice: 'Message sent'
+	end
+
+	private
+	def user_params
+		params.require(:user).permit(:name, :email, :phone, :message)
 	end
 end

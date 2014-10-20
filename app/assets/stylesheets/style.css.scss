@@ -7,7 +7,7 @@ img {max-height: 100%;width: 100%;}ul,ol {list-style: none;}
 *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
 .fl {float: left;} .fr{float: right;} .clr {clear: both;} .reset {list-style: none;} .ovfl-hide {overflow: hidden;} .ovfl-auto {overflow: auto;} .ovfl-visi {overflow: visible;}
 /**font**/
-@font-face {font-family: 'DroidSerifRegular';src: url('../font/droidserif-regular.eot');src: url('../font/droidserif-regular.eot') format('embedded-opentype'),url('../font/droidserif-regular.woff2') format('woff2'),url('../font/droidserif-regular.woff') format('woff'),url('../font/droidserif-regular.ttf') format('truetype'),url('../font/droidserif-regular.svg#DroidSerifRegular') format('svg');}
+@font-face {font-family: 'DroidSerifRegular';src: url('/assets/droidserif-regular.eot');src: url('/assets/droidserif-regular.eot') format('embedded-opentype'),url('/assets/droidserif-regular.woff2') format('woff2'),url('/assets/droidserif-regular.woff') format('woff'),url('/assets/droidserif-regular.ttf') format('truetype'),url('/assets/droidserif-regular.svg#DroidSerifRegular') format('svg');}
 body {font:normal 12px;font-family: "arial";background-color:#F9F9F9;border-top:5px solid #4f91b1;}
 .wrapper {padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;max-width:960px;}
 a{color: #e56d00;} a:focus, a:hover, a:active{outline: none;}
