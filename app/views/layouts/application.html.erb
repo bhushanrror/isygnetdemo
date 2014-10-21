@@ -95,7 +95,7 @@
                                 <% end %>                        
                             <% end %>                       
                         <% end %>
-					</ul>
+					        </ul>
                 </div>
                 <div class="fr phone-number clr">
                 	<span class="phone-num-img">&nbsp;</span>
@@ -105,18 +105,16 @@
                 <nav class="clr fr">
                     <a class="menu-btn" href="javascript:void(0);">Menu</a>
                     <ul class="fr menu-pills menu">
-                        <li><a href="/home" class="active">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a>Our courses</a>
-                            <ul class="sub-menu">
-
-                           <% @courses.each do |c| %>
+                        <li><a href="/home" class="<%= is_active?('/home') %>">Home</a></li>
+                        <li><a href="/about" class="<%= is_active?('/about') %>">About Us</a></li>                        
+                        <li><a class="<%= is_active?('/course/') %>">Our courses</a>
+                          <ul class="sub-menu">
+                            <% @courses.each do |c| %>
                               <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } %></li>
-                           <% end %> 
+                            <% end %> 
                           </ul>
-
                         </li>                        
-                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/contact" class="<%= is_active?('/contact') %>">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
