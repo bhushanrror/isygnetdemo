@@ -19,28 +19,27 @@
     </div>
     <div class="col-12 contact">
       <div class="col-6">
-        <span class="getintouch">Get in touch</span>
-        
+        <span class="getintouch">Get in touch</span>        
         <%= form_tag(sendmail_path) do %>
-            <div class="form-group">
+            <div class="input_field">
               <%= label_tag 'name', 'Name' %>
-               <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Your Name', required: true %>
+              <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Your Name', required: true %>
             </div>
             <div class="input_field">
               <%= label_tag 'email', 'Email' %>
               <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address' %>
-          </div>          
+          </div>
           <div class="input_field">
                <%= label_tag 'phone', 'Phone no.' %>
-               <%= text_area_tag 'phone', nil, class: 'form-control', rows: 4, placeholder: 'Phone no.' %>
+               <%= text_field_tag 'phone', nil, class: 'form-control', rows: 4, placeholder: 'Phone no.', required: true  %>
           </div>
           <div class="input_field">
                <%= label_tag 'message', 'Your Message' %>
                <%= text_area_tag 'message', nil, class: 'form-control', rows: 4, placeholder: 'Your Message' %>
           </div>
-           <%= submit_tag 'Send', class: 'btn-normal' %>
-       <% end %>
-      </div>  
+          <p class="text-left"><button type="submit" class="btn-normal">Send</button></p>           
+        <% end %>
+      </div>
       <div class="col-6">
         <address>
           <span class="getintouch">iSygnet</span>
@@ -52,7 +51,7 @@
           <p class="email"><a href="mailto:sales@starkdigital.net">sales@starkdigital.net</a></p>
         </address>
       </div> 
-    </div>   
+    </div>
     <div class="clr"></div>
   </section>                       
   <footer>
