@@ -1,4 +1,4 @@
-  <%= semantic_form_for [:admin, @course] do |f| %>
+  <%= semantic_form_for [:admin, @course], :html => { :multipart => true }  do |f| %>
     <label>Title</label><br />
     <%=f.text_field :title,:label => "Title" %><br />
     <label>Description</label><br />
