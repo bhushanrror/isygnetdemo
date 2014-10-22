@@ -110,7 +110,7 @@
                         <li><a class="<%= is_active?('/course/') %>">Our courses</a>
                           <ul class="sub-menu">
                             <% @courses.each do |c| %>
-                              <li><%= link_to c.title, {:action => 'course_detail', :title => c.title } %></li>
+                              <li><%= link_to c.title, {:action => 'course_detail', :title => c.slug } %></li>
                             <% end %> 
                           </ul>
                         </li>                        

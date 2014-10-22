@@ -18,25 +18,25 @@
                             <a id="various3" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
                                 <%= image_tag testimonial.pic.url(:medium) %>
                             </a>
-                        </div>  
-                    </div>  
+                        </div>
+                    </div>
                     <div class="col-7">
                         <h2>Student Testimonials</h2>
-                        <p>See what our graduates have to say about how Digital Marketing Institute programmes helped their careers.</p>                       
+                        <p>See what our graduates have to say about how Digital Marketing Institute programmes helped their careers.</p>
                         <div class="boxs clr col">
-                <% else %>  
+                <% else %>
                         <div class="col-4">
                                 <a href="#" class="thumbs shadow">
                                  <%= image_tag testimonial.pic.url(:medium) %>
                                 </a>
                         </div>
                 <% end %>
-                <% if (index == 3) then %> 
+                <% if (index == 3) then %>
                     </div>
-                    </div>   
-                <% elsif (@testimonials.size == (index-1)) %> 
                     </div>
-                    </div>   
+                <% elsif (@testimonials.size == (index-1)) %>
+                    </div>
+                    </div>
                 <% end %>
 
             <% end %>
