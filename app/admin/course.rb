@@ -8,6 +8,15 @@ ActiveAdmin.register Course do
       end
     end
   end  
+  index do
+    column :title
+    column :description
+    column :duration
+    column :fees
+    column :slug
+    column :pic_file_name
+    actions
+  end
     # form :partial => "form"
   form do |f|
       f.inputs "" do

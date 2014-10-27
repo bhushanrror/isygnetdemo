@@ -30,7 +30,11 @@ class HomeController < ApplicationController
 	end
 	def sendmail	
 	@user = User.new
-	@user.name = params[:name]
+	if (!params[:name])
+		redirect_to contact_path, notice: 'name field empty'
+	else
+		@user.name = params[:name]
+	end
     @user.email = params[:email]
     @user.phone = params[:phone]
     @user.message = params[:message]
