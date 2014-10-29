@@ -8,51 +8,47 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
         <script>
-        alert('some-unique-string')
-        	jQuery.noConflict();
-           	jQuery(function() {           
-               var pull = jQuery('.menu-btn');
-               menu = jQuery('nav .menu');
-               menuHeight = menu.height();
-               jQuery(pull).on('click', function(e) {
-               e.preventDefault();
-               menu.slideToggle();
-               });
-               jQuery(window).resize(function(){
-               var w = jQuery(window).width();
-               if(w > 320 && menu.is(':hidden')) {
-               menu.removeAttr('style');
-               }
-               });
-               jQuery("#slider1").responsiveSlides({
-               speed: 800
-               });
+           	$(function() {           
+              var pull = $('.menu-btn');
+              menu = $('nav .menu');
+              menuHeight = menu.height();
+              $(pull).on('click', function(e) {
+              e.preventDefault();
+              menu.slideToggle();
+              });
+              $(window).resize(function(){
+              var w = $(window).width();
+              if(w > 320 && menu.is(':hidden')) {
+              menu.removeAttr('style');
+              }
+              });
+              $("#slider1").responsiveSlides({
+              speed: 800
+              });
             });
         </script>       
     <script type="text/javascript">  
     </script>
-		<script type="text/javascript">
-			
-            jQuery(document).ready(function(){
-           jQuery('.msg').val('');
-    			jQuery('.btn-normal').on("click", function(e){
-    				
-                    var course = jQuery('.input-control').val();
+		<script type="text/javascript">			
+          $(document).ready(function(){
+          $('.msg').val('');
+    			$('.btn-normal').on("click", function(e){    				
+            var course = $('.input-control').val();
     				if(course){
     					var url = "/course/"+course;    
-    					jQuery(location).attr('href',url);
+    					$(location).attr('href',url);
     				}else{
-                        jQuery('.msg').append('Please select value!');
+                        $('.msg').append('Please select value!');
                         e.preventDefault;
                     }
-    			}); 
+    			   }); 
 
-                jQuery('.input-control').on("change", function(e){
+            $('.input-control').on("change", function(e){
                     alert(0); return false;
                     
-                }); 
+            }); 
 
-			});
+			     });
     </script>
 </head>
 <body>
