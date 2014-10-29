@@ -9,27 +9,36 @@
 	<meta name="viewport" content="width=device-width">
         <script>
            	$(function() {           
-              var pull = $('.menu-btn');
-              menu = $('nav .menu');
-              menuHeight = menu.height();
-              $(pull).on('click', function(e) {
-              e.preventDefault();
-              menu.slideToggle();
-              });
-              $(window).resize(function(){
-              var w = $(window).width();
-              if(w > 320 && menu.is(':hidden')) {
-              menu.removeAttr('style');
-              }
-              });
-              
+               var pull = $('.menu-btn');
+               menu = $('nav .menu');
+               menuHeight = menu.height();
+               $(pull).on('click', function(e) {
+               e.preventDefault();
+               menu.slideToggle();
+               });
+               $(window).resize(function(){
+               var w = $(window).width();
+               if(w > 320 && menu.is(':hidden')) {
+               menu.removeAttr('style');
+               }
+               });
+               
             });
-        </script>      
-		<script type="text/javascript">			
-          $(document).ready(function(){
-          $('.msg').val('');
-    			$('.btn-normal').on("click", function(e){    				
-            var course = $('.input-control').val();
+        </script>       
+    <script type="text/javascript">  
+      $(function(){
+        $("#slider1").responsiveSlides({
+          speed: 800
+        });
+      });
+    </script>
+		<script type="text/javascript">
+			
+            $(document).ready(function(){
+           $('.msg').val('');
+    			$('.btn-normal').on("click", function(e){
+    				
+                    var course = $('.input-control').val();
     				if(course){
     					var url = "/course/"+course;    
     					$(location).attr('href',url);
@@ -37,17 +46,14 @@
                         $('.msg').append('Please select value!');
                         e.preventDefault;
                     }
-    			   }); 
+    			}); 
 
-            $('.input-control').on("change", function(e){
+                $('.input-control').on("change", function(e){
                     alert(0); return false;
                     
-            }); 
+                }); 
 
-			     });
-    </script>
-    <script type="text/javascript">
-            document.getElementById("slider1").responsiveSlides();        
+			});
     </script>
 </head>
 <body>
