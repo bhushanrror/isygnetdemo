@@ -38,7 +38,7 @@
         openEffect  : 'none',
         closeEffect : 'none'
     });
-});
+    });
 
     document.onkeydown = function(evt) {
     evt = evt || window.event;
@@ -59,8 +59,7 @@
             <section class="stu-tetis shadow margin">
             <!-- Add student testimonial from testimonial object -->
 
-            <% @testimonials[0..3].each_with_index do |testimonial, index| %>
-            
+            <% @testimonials[0..3].each_with_index do |testimonial, index| %>            
                 <% if (index == 0) then %>
                     <div class="col-5">
                         <div class="shadow box padding">
