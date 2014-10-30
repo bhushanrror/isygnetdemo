@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<script type="text/javascript" src="<%= asset_path('responsiveslides.min.js') %>"></script>	
+	<script type="text/javascript" src="<%= asset_path('responsiveslides.min.js')%>"></script>	
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#slider1').responsiveSlides();
@@ -67,7 +67,7 @@
 	<div class="wrapper">
     	<div class="col">
         	<div class="col-4">
-            	<h1 class="logo"><a href= "/home" ><img src="<%= asset_path('isygnet-logo-final.png') %>"></a></h1>
+            	<h1 class="logo"><a href= "<%= root_path %>" ><img src="<%= asset_path('isygnet-logo-final.png') %>"></a></h1>
             </div>
             <div class="col-8">
             	<div class="fr clr social">
@@ -113,7 +113,7 @@
                 <nav class="clr fr">
                     <a class="menu-btn" href="javascript:void(0);">Menu</a>
                     <ul class="fr menu-pills menu">
-                        <li><a href="/home" class="<%= is_active?('/home') %>">Home</a></li>
+                        <li><a href="<%= root_path %>" class="<%= is_active?('/home') %>">Home</a></li>
                         <li><a href="/about" class="<%= is_active?('/about') %>">About Us</a></li>                        
                         <li><a class="<%= is_active?('/course/') %>">Our courses</a>
                           <ul class="sub-menu">
@@ -131,6 +131,10 @@
 </header>
 
 <%= yield %>
+
+<footer>
+	<p>Copyright 2014 All Rights Reserved by <a href="<%= root_path %>">iSygnet</a><p>
+</footer><!-- footer end -->    
 
 </body>
 </html>
