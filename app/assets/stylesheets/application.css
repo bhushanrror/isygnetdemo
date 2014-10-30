@@ -12,5 +12,5 @@
 *= require_tree .
 *= require 'style'
 *= require 'responsiveslides'
-*= require 'jquery.fancybox'
+*= require 'jquery_fancybox'
 */
