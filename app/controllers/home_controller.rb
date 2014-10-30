@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+	after_action :allow_iframe, only: :index
 
 	def index
 		@courses = Course.find(:all)
@@ -47,4 +48,7 @@ class HomeController < ApplicationController
 	def user_params
 		params.require(:user).permit(:name, :email, :phone, :message)
 	end
+	def allow_iframe
+	    response.headers.except! 'X-Frame-Options'
+  	end
 end
