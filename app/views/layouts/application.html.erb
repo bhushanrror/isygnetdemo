@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+	<script type="text/javascript" src="<%= asset_path('responsiveslides.min.js') %>"></script>	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#slider1').responsiveSlides();
+		});
+	</script>
         <script>
            	$(function() {           
                var pull = $('.menu-btn');
@@ -27,8 +33,8 @@
         </script> 
 		<script type="text/javascript">
 			
-            $(document).ready(function(){
-              $('#slider1').responsiveSlides();
+           $(document).ready(function(){
+           
            $('.msg').val('');
     			$('.btn-normal').on("click", function(e){
     				
