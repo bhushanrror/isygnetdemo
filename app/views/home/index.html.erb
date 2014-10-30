@@ -15,7 +15,7 @@
                 <% if (index == 0) then %>
                     <div class="col-5">
                         <div class="shadow box padding">
-                            <a id="various3" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">
+                            <a id="various3" href="<%=testimonial.videourl%>">
                                 <%= image_tag testimonial.pic.url(:medium) %>
                             </a>
                         </div>
@@ -27,7 +27,7 @@
                 <% else %>
                         <div class="col-4">
                                 <a href="#" class="thumbs shadow">
-                                 <%= image_tag testimonial.pic.url(:medium) %>
+                                    <%= image_tag testimonial.pic.url(:medium) %>
                                 </a>
                         </div>
                 <% end %>
