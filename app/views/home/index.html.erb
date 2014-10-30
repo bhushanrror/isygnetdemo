@@ -1,8 +1,51 @@
 <div class="wrapper clr">
-    <script type="text/javascript">
+<script type="text/javascript">
         $(document).ready(function(){
             $('#slider1').responsiveSlides();
+            /*$( "body" ).mousedown(function() {
+                alert( "Handler for .mousedown() called." );
+            });*/
         });
+    </script>
+    <style>
+    .ontop {
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position: absolute; 
+    background-color: #cccccc;
+    color: #aaaaaa;
+    opacity: .4;
+    filter: alpha(opacity = 50);
+    }
+
+    </style>
+    <script type="text/javascript">
+    //To detect escape button
+    jQuery(document).ready(function($) {
+        alert(11);
+    $(".various").fancybox({
+        maxWidth    : 800,
+        maxHeight   : 600,
+        fitToView   : false,
+        width       : '70%',
+        height      : '70%',
+        autoSize    : false,
+        closeClick  : false,
+        openEffect  : 'none',
+        closeEffect : 'none'
+    });
+});
+
+    document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        $('.ui-content').hide();
+    }
+    };
     </script>
             <section class="slider shadow">
                 <!-- <img src="/assets/img1.jpg"> -->
@@ -17,12 +60,12 @@
             <!-- Add student testimonial from testimonial object -->
 
             <% @testimonials[0..3].each_with_index do |testimonial, index| %>
+            
                 <% if (index == 0) then %>
                     <div class="col-5">
                         <div class="shadow box padding">
-                            <a id="various3" href="<%=testimonial.videourl%>">
-                                <%= image_tag testimonial.pic.url(:medium) %>
-                            </a>
+                            <!--a data-rel="popup" href="#myPopup"></a-->
+                            <a href="<%=testimonial.videourl%>" class="various fancybox.iframe"><%= image_tag testimonial.pic.url(:medium) %></a>                            
                         </div>
                     </div>
                     <div class="col-7">
