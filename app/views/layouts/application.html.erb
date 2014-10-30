@@ -3,14 +3,12 @@
 <head>
   <title>Isygnetdemo</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <link href="https://isygnet.herokuapp.com/assets/jquery.fancybox.css" rel="stylesheet" type="text/css">
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<script type="text/javascript" src="<%= asset_path('responsiveslides.min.js')%>"></script>
   <script type="text/javascript" src="<%= asset_path('jquery.fancybox.pack.js')%>"></script>
-
         <script>
            	$(function() {           
                var pull = $('.menu-btn');
