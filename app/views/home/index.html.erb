@@ -46,6 +46,13 @@
     }
     };
     </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#titleclick").click(function(){
+                $(".dimage").alert();
+            });
+        });
+    </script>
             <section class="slider shadow">
                 <!-- <img src="/assets/img1.jpg"> -->
                 <ul class="rslides" id="slider1">
@@ -104,7 +111,7 @@
             <section class="courses shadow">                   
                     <div class="col-7">
                         <div class="phone-img">
-                            <img src="<%= asset_path('img4.jpg') %>">
+                            <img class="dimage" src="<%= asset_path('img4.jpg') %>">
                         </div>
                     </div>
                     <div class="col-5">
@@ -112,9 +119,9 @@
                         <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
                         <div class="input-group">
                             <select class="input-control">
-                                <option value=""> Select option</option>
+                                <option> Select option</option>
                                 <% @courses.each do |c| %>
-                            	<option><%= c.title %></option>
+                            	<option id="titleclick"><%= c.title %></option>
                                     <div class="col-4">
                                     <div class="index-img">
 

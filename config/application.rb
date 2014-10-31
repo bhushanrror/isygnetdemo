@@ -28,8 +28,6 @@ module Isygnetdemo
                                  "fontawesome-webfont.svg",
                                  "fontawesome-webfont.woff")
 
-
-
     config.assets.precompile << Proc.new do |path|
       if path =~ /\.(css|js)\z/
         full_path = Rails.application.assets.resolve(path).to_path

@@ -38,7 +38,7 @@
                                 	<%= image_tag c.pic.url(:medium) %>
                                     <span class="caption"><p value="<%= c.title %>"></span>
                                       <li style="float: left;"><%= c.title %> </li>                            
-                                <%= link_to 'Read More', {:action => 'course_detail', :title => c.slug }, :class => 'read-btn' %>
+                                  <%= link_to 'Read More', {:action => 'course_detail', :title => c.slug }, :class => 'read-btn' %>
                               </div>                          
                             </div>
                   <% end %>
