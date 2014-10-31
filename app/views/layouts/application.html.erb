@@ -25,31 +25,7 @@
                }
                });               
             });
-        </script> 
-		    <script type="text/javascript">
-			
-           $(document).ready(function(){
-           
-           $('.msg').val('');
-    			$('.btn-normal').on("click", function(e){
-    				
-                    var course = $('.input-control').val();
-    				if(course){
-    					var url = "/course/"+course;    
-    					$(location).attr('href',url);
-    				}else{
-                        $('.msg').append('Please select value!');
-                        e.preventDefault;
-                    }
-    			}); 
-
-                $('.input-control').on("change", function(e){
-                    alert(0); return false;
-                    
-                }); 
-
-			});
-    </script>
+        </script>    
     
 </head>
 <body>

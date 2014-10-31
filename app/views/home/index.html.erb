@@ -2,27 +2,28 @@
 <script type="text/javascript">
         $(document).ready(function(){
             $('#slider1').responsiveSlides();
-            /*$( "body" ).mousedown(function() {
-                alert( "Handler for .mousedown() called." );
-            });*/
+            $(".courseimage").attr("src", $("#def_image").val());
+            $(".input-control option[value ='"+$("#def_path").val()+"' ]").attr('selected', 'selected');
+            $('.input-control').on("change", function(){
+                var urlAbsolute = $(".input-control").find(":selected").val();
+                urlAbsolute = urlAbsolute.split(" ");
+                $(".courseimage").attr("src", urlAbsolute[0]);
+            });
+            $('.msg').val('');
+            $('.btn-normal').on("click", function(e){
+                var urlAbsolute = $(".input-control").find(":selected").val();
+                urlAbsolute = urlAbsolute.split(" ");
+                course = urlAbsolute[1];
+                if(course){
+                    var url = "/course/"+course;    
+                    $(location).attr('href',url);
+                }else{
+                $('.msg').append('Please select value!');
+                       e.preventDefault;
+                }
+            });
         });
-    </script>
-    <style>
-    .ontop {
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: none;
-    position: absolute;
-    background-color: #cccccc;
-    color: #aaaaaa;
-    opacity: .4;
-    filter: alpha(opacity = 50);
-    }
-
-    </style>
+    </script>    
     <script type="text/javascript">
     //To detect escape button
     jQuery(document).ready(function($) {
@@ -37,14 +38,7 @@
         openEffect  : 'none',
         closeEffect : 'none'
     });
-    });
-
-    document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
-        $('.ui-content').hide();
-    }
-    };
+    });    
     </script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -111,24 +105,25 @@
             <section class="courses shadow">                   
                     <div class="col-7">
                         <div class="phone-img">
-                            <img class="dimage" src="<%= asset_path('img4.jpg') %>">
-                        </div>
+                    <img class="courseimage" src="">
+                      </div>
                     </div>
                     <div class="col-5">
                         <h2>Our Courses</h2>
                         <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
+
+                        <!-- To set the first iem image as default get the first element of array snd set the value of image  -->
+                        <% @@course = @courses.first %>
+                        <input id="def_image" type="hidden" value="<%=@@course.pic.url%>">
+                        <input id="def_path" type="hidden" value="<%=@@course.pic.url+' '+@@course.slug%>">
+                        <!-- To set the first iem image as default get the first element of array snd set the value of image  -->
                         <div class="input-group">
-                            <select class="input-control">
-                                <option> Select option</option>
+
+                            <select class="input-control" >
                                 <% @courses.each do |c| %>
-                            	<option id="titleclick"><%= c.title %></option>
-                                    <div class="col-4">
-                                    <div class="index-img">
+                            	<option value="<%=c.pic.url+' '+c.slug%>"><%= c.title %></option>
 
-                                    </div>                          
-                                    </div>
                                 <% end %>
-
                             </select>
                         </div>
                         <div class="clr"></div> 
