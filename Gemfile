@@ -35,6 +35,7 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'friendly_id'
 
 gem 'active_admin_editor'
+gem 'yui-compressor'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
