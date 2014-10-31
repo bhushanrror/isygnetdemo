@@ -40,7 +40,13 @@
     });
     });    
     </script>
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#titleclick").click(function(){
+                $(".dimage").alert();
+            });
+        });
+    </script>
             <section class="slider shadow">
                 <!-- <img src="/assets/img1.jpg"> -->
                 <ul class="rslides" id="slider1">
@@ -99,8 +105,8 @@
             <section class="courses shadow">                   
                     <div class="col-7">
                         <div class="phone-img">
-                            <img class="courseimage" src="">
-                        </div>
+                    <img class="courseimage" src="">
+                      </div>
                     </div>
                     <div class="col-5">
                         <h2>Our Courses</h2>
@@ -112,9 +118,11 @@
                         <input id="def_path" type="hidden" value="<%=@@course.pic.url+' '+@@course.slug%>">
                         <!-- To set the first iem image as default get the first element of array snd set the value of image  -->
                         <div class="input-group">
+
                             <select class="input-control" >
                                 <% @courses.each do |c| %>
                             	<option value="<%=c.pic.url+' '+c.slug%>"><%= c.title %></option>
+
                                 <% end %>
                             </select>
                         </div>
