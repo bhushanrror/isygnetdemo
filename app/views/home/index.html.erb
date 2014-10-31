@@ -2,11 +2,8 @@
 <script type="text/javascript">
         $(document).ready(function(){
             $('#slider1').responsiveSlides();
-
             $(".courseimage").attr("src", $("#def_image").val());
-
-           // $(".input-control option[value='$("#def_value").val()']").attr('selected', 'selected');
-
+            $(".input-control option[value ='"+$("#def_path").val()+"' ]").attr('selected', 'selected');
             $('.input-control').on("change", function(){
                 var urlAbsolute = $(".input-control").find(":selected").val();
                 urlAbsolute = urlAbsolute.split(" ");
@@ -24,8 +21,7 @@
                 $('.msg').append('Please select value!');
                        e.preventDefault;
                 }
-            }); 
-
+            });
         });
     </script>    
     <script type="text/javascript">
