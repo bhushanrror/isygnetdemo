@@ -113,16 +113,20 @@
                         <p>Delivered through video, webinars and interactive workshops. Our programmes are presented by the best digital marketing experts from around the world.</p>
 
                         <!-- To set the first iem image as default get the first element of array snd set the value of image  -->
-                        <% @@course = @courses.first %>
+                        <% @@course = nil %>
+                        <% @@course = @courses.first if (@courses.size >0)%>
+                        <% if @@course %>
                         <input id="def_image" type="hidden" value="<%=@@course.pic.url%>">
                         <input id="def_path" type="hidden" value="<%=@@course.pic.url+' '+@@course.slug%>">
+                        <% else %>
+                         	<input id="def_image" type="hidden" value="<%= asset_path('img4.jpg') %>">
+                        	<input id="def_path" type="hidden" value="#">
+                         <% end %>
                         <!-- To set the first iem image as default get the first element of array snd set the value of image  -->
                         <div class="input-group">
-
                             <select class="input-control" >
                                 <% @courses.each do |c| %>
-                            	<option value="<%=c.pic.url+' '+c.slug%>"><%= c.title %></option>
-
+                            		<option value="<%=c.pic.url+' '+c.slug%>"><%= c.title %></option>
                                 <% end %>
                             </select>
                         </div>
@@ -156,7 +160,7 @@
                         </div>   
                         <p>Kartik Patil<span> Director </span></p>
                     </div>
-                    
+
                     <div class="col-4">
                         <div class="train-img">
                             <img src="<%= asset_path('img10.png') %>" alt="img" width="227px" height="231px">
